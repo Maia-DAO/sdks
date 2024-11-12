@@ -25,6 +25,7 @@ export function calculateLiquidityData(
     fullRangeLiquidityUSD,
   }
 }
+
 //range must be a number equivalent to the range of the pool
 export function calculateCustomLiquidityData(
   pool: any,
