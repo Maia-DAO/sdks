@@ -1,6 +1,7 @@
 import { MAX_RANGE } from '../constants/constants'
 import { convertBasedOnEfficiency, getAmountsCurrentTickUSD } from './tvl'
 
+// Calculate the liquidity data for the active and full range of the pool
 export function calculateLiquidityData(
   pool?: any,
   incentive?: any,
