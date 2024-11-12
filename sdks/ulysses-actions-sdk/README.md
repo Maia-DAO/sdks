@@ -17,7 +17,7 @@ Pull requests welcome!
 
 ## Installation
 
-To install Ulysses Actions SDK, follow on of these steps: 
+To install Ulysses Actions SDK, follow on of these steps:  
 
 ```bash
 npm install ulysses-actions-sdk
