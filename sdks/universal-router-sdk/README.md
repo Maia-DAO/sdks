@@ -12,7 +12,7 @@ import {
   LooksRareData,
   SeaportTrade,
   SeaportData
-} from "@uniswap/universal-router-sdk"; 
+} from "@uniswap/universal-router-sdk";  
 
 // Each protocol data object contains 1 call to that protocol. Some protocols can fit
 // many NFT purchase within 1 call, like seaport. Others require multiple calls per NFT (like LooksRare).
