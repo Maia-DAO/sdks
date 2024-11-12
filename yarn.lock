@@ -9027,15 +9027,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hermes-swap-router-sdk@npm:^0.0.59":
-  version: 0.0.59
-  resolution: "hermes-swap-router-sdk@npm:0.0.59"
+"hermes-swap-router-sdk@npm:^0.0.60":
+  version: 0.0.60
+  resolution: "hermes-swap-router-sdk@npm:0.0.60"
   dependencies:
     "@ethersproject/abi": ^5.7.0
     "@uniswap/swap-router-contracts": ^1.3.0
     hermes-v2-sdk: 0.1.0
     maia-core-sdk: 1.0.47
-  checksum: 270eb297e34cf1544951556fc22dc63644da7c74aca6b49da57d169f52f1dab1f5544c43cfc173728593446df094d3f4f59d1a472299d21482c40b203192d964
+  checksum: 56f2d584aa0717d711f1cbf88263b9e6b98dd5f5ab29a8b26769dc3125edadcfb5a89c9502e413b28a36cff2444ba2a6d5c9fa70b0bf324f47b6d9ee708a5b48
   languageName: node
   linkType: hard
 
@@ -9069,7 +9069,7 @@ __metadata:
     eslint-plugin-prettier: ^3.4.1
     ethers: ^5.7.0
     hardhat: ^2.14.0
-    hermes-swap-router-sdk: ^0.0.59
+    hermes-swap-router-sdk: ^0.0.60
     hermes-v2-sdk: 0.1.0
     maia-core-sdk: 1.0.47
     prettier: ^2.4.1
