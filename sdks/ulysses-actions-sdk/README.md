@@ -9,7 +9,7 @@ Pull requests welcome!
 
 ⚒️ Ulysses Actions SDK is a powerful tool that allows you to easily use with Ulysses Protocol for cross-chain contract interactions as well as asset transfers.
 
-## Features
+## Features 
 
 - Actions
 - Context Handler
