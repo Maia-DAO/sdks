@@ -25,7 +25,7 @@ export function calculateLiquidityData(
     fullRangeLiquidityUSD,
   }
 }
-//range must be a number equivalent to the range of the pool (minwidth)
+//range must be a number equivalent to the range of the pool
 function calculateCustomLiquidityData(
   pool: any,
   incentive: any,
