@@ -9046,8 +9046,8 @@ __metadata:
     "@ethersproject/abi": ^5.7.0
     "@types/jest": ^24.0.25
     "@uniswap/swap-router-contracts": ^1.3.0
-    hermes-v2-sdk: 0.0.92
-    maia-core-sdk: 1.0.46
+    hermes-v2-sdk: 0.1.0
+    maia-core-sdk: 1.0.47
     prettier: ^2.4.1
     tsdx: ^0.14.1
   languageName: unknown
@@ -9100,7 +9100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hermes-v2-sdk@npm:^0.1.0":
+"hermes-v2-sdk@npm:0.1.0, hermes-v2-sdk@npm:^0.1.0":
   version: 0.1.0
   resolution: "hermes-v2-sdk@npm:0.1.0"
   dependencies:
