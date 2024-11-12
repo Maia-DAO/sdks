@@ -26,7 +26,7 @@ export function calculateLiquidityData(
   }
 }
 //range must be a number equivalent to the range of the pool
-function calculateCustomLiquidityData(
+export function calculateCustomLiquidityData(
   pool: any,
   incentive: any,
   token0USD?: any,
