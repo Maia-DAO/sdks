@@ -9027,15 +9027,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hermes-swap-router-sdk@npm:^0.0.61":
-  version: 0.0.61
-  resolution: "hermes-swap-router-sdk@npm:0.0.61"
+"hermes-swap-router-sdk@npm:^0.0.62":
+  version: 0.0.62
+  resolution: "hermes-swap-router-sdk@npm:0.0.62"
   dependencies:
     "@ethersproject/abi": ^5.7.0
     "@uniswap/swap-router-contracts": ^1.3.0
-    hermes-v2-sdk: 0.1.1
+    hermes-v2-sdk: 0.1.2
     maia-core-sdk: 1.0.47
-  checksum: 5f81e307e64dca45dc0efe6d1cf4013d9a7d6dae7a620062ed5a71613290ce5ae4703a8648e4fa3c2fe54e6c39c2f13af81a57a54e62bdcdb57f6c2ad6d796a8
+  checksum: 57ade953f857d83c7ce4edc69b0d99ce8fac24e2b1b14a6519bb19ec2d11d46ec2ea304f5db837b813ac8ce230254a4383cce6cd28ea4a7072e4ef2bf8d602e8
   languageName: node
   linkType: hard
 
@@ -9069,8 +9069,8 @@ __metadata:
     eslint-plugin-prettier: ^3.4.1
     ethers: ^5.7.0
     hardhat: ^2.14.0
-    hermes-swap-router-sdk: ^0.0.61
-    hermes-v2-sdk: 0.1.1
+    hermes-swap-router-sdk: ^0.0.62
+    hermes-v2-sdk: 0.1.2
     maia-core-sdk: 1.0.47
     prettier: ^2.4.1
     ts-node: ^10.9.1
@@ -9080,25 +9080,6 @@ __metadata:
     typescript: ^4.3.3
   languageName: unknown
   linkType: soft
-
-"hermes-v2-sdk@npm:0.1.1":
-  version: 0.1.1
-  resolution: "hermes-v2-sdk@npm:0.1.1"
-  dependencies:
-    "@ethersproject/abi": ^5.7.0
-    "@ethersproject/solidity": ^5.7.0
-    "@types/lodash.clonedeep": ^4.5.9
-    "@uniswap/swap-router-contracts": ^1.3.0
-    "@uniswap/v3-periphery": ^1.1.1
-    "@uniswap/v3-staker": 1.0.0
-    bignumber.js: ^9.0.2
-    jsbi: ^3.1.5
-    lodash.clonedeep: ^4.5.0
-    maia-core-sdk: ^1.0.47
-    tiny-invariant: ^1.1.0
-  checksum: 84a077f26f4a23d955490aa23f4230fcf34e09495b4b5a7e50aa5de6f95c47df06765972a5e0661d3e7828665e459bd3c4b080388b3b089b6400cac07a06e1be
-  languageName: node
-  linkType: hard
 
 "hermes-v2-sdk@npm:0.1.2, hermes-v2-sdk@npm:^0.1.2":
   version: 0.1.2
