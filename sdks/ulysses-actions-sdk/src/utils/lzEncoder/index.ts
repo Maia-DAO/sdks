@@ -447,7 +447,7 @@ export class LayerZeroEndpointCalldataEncoder {
           dstChainId: dstChainIdLz ?? 0,
         }
       )
-      baseGas = BRANCH_BRIDGE_AGENT_ACTION_BASE_GAS.SINGLE_ASSET_DEPOSIT_WITH_FALLBACK.toString()
+      baseGas = BRANCH_BRIDGE_AGENT_ACTION_BASE_GAS.SINGLE_ASSET_DEPOSIT.toString()
     } else if (this.isMultipleSettlementParams(settlementTokens)) {
       calldata = LzEndpoint.createRootCallOutAndBridgeMultipleLzEndpointCalldata(
         this.rootChainIdLz,
@@ -471,7 +471,7 @@ export class LayerZeroEndpointCalldataEncoder {
           dstChainId: dstChainIdLz ?? 0,
         }
       )
-      baseGas = BRANCH_BRIDGE_AGENT_ACTION_BASE_GAS.MULTIPLE_ASSET_DEPOSIT_WITH_FALLBACK.toString()
+      baseGas = BRANCH_BRIDGE_AGENT_ACTION_BASE_GAS.MULTIPLE_ASSET_DEPOSIT.toString()
     }
 
     return [
