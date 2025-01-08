@@ -121,6 +121,19 @@ const UlyssesMetis: IUlyssesCommonContracts = {
   NativeToken: '0x1ce28C4f77991b604868bA48f9154408313C65b6',
 }
 
+const UlyssesSonic: IUlyssesCommonContracts = {
+  BranchPort: '0x0000151d008235A6cC00004F00FA2bDF9dF95400',
+  BranchBridgeAgentFactory: '0x5DFb3dbA421891e616B232466BD97Df94ab26E4C',
+  CoreBranchRouter: '0xd0f74CbB2a5f67F48E10F7B5e293e0f78B79B599',
+  CoreBranchBridgeAgent: '0x93A2a67010BCCc39e8A0B3E51bcB3D8aDF1DB83a',
+  ERC20hTokenBranchFactory: '0x92dc9db1751f6668a504e4650a275d547c586a38',
+  MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
+  MulticallBranchBridgeAgent: ZERO_ADDRESS,
+  MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
+  MulticallBranchBridgeAgentLibZip: ZERO_ADDRESS,
+  NativeToken: '0x5b05C18c3D30b23763891D4Bc27311999b2b8194',
+}
+
 // TESTNET - Ulysses Omnichain Address Definitions per Chain
 
 const UlyssesSepoliaBranch: IUlyssesCommonContracts = {
@@ -211,6 +224,7 @@ export const Ulysses: IUlysses = {
   [SupportedChainId.AVAX]: UlyssesAvax,
   [SupportedChainId.BSC]: UlyssesBSC,
   [SupportedChainId.METIS]: UlyssesMetis,
+  [SupportedChainId.SONIC]: UlyssesSonic,
 
   // [SupportedChainId.FANTOM]: UlyssesEthereum,
   // [SupportedChainId.SCROLL]: UlyssesEthereum,
