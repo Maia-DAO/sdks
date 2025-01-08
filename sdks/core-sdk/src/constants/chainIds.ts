@@ -13,6 +13,7 @@ export enum SupportedChainId {
   POLYGON = 137,
   AVAX = 43114,
   METIS = 1088,
+  SONIC = 146,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 250,
@@ -50,6 +51,7 @@ export enum SupportedLayerzeroChainId {
   BSC = 102,
   AVAX = 106,
   METIS = 151,
+  SONIC = 146,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 112,
@@ -91,6 +93,7 @@ export const LZ_CHAIN_ID_FROM_EVM_CHAIN_ID: chainIdMap = {
   [SupportedChainId.AVAX]: SupportedLayerzeroChainId.AVAX,
   [SupportedChainId.METIS]: SupportedLayerzeroChainId.METIS,
   [SupportedChainId.BASE]: SupportedLayerzeroChainId.BASE,
+  [SupportedChainId.SONIC]: SupportedLayerzeroChainId.SONIC,
 
   // [SupportedChainId.FANTOM]: SupportedLayerzeroChainId.FANTOM,
   // [SupportedChainId.SCROLL]: SupportedLayerzeroChainId.SCROLL,
@@ -124,6 +127,7 @@ export const EVM_CHAIN_ID_FROM_LZ_CHAIN_ID: chainIdMap = {
   [SupportedLayerzeroChainId.AVAX]: SupportedChainId.AVAX,
   [SupportedLayerzeroChainId.METIS]: SupportedChainId.METIS,
   [SupportedLayerzeroChainId.BASE]: SupportedChainId.BASE,
+  [SupportedLayerzeroChainId.SONIC]: SupportedChainId.SONIC,
 
   // [SupportedLayerzeroChainId.FANTOM]: SupportedChainId.FANTOM,
   // [SupportedLayerzeroChainId.SCROLL]: SupportedChainId.SCROLL,
