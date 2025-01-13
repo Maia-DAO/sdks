@@ -2,7 +2,7 @@ import { IAction, IActionResult } from '../action'
 import { IActionContext } from '../actionContext'
 
 /**
- * @title ActionBuilder
+ * @title ActionBuilder.
  * @notice A builder class for creating a batch of actions to be executed onchain.
  * @author MaiaDAO
  */
