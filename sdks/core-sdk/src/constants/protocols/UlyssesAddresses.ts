@@ -128,9 +128,9 @@ const UlyssesSonic: IUlyssesCommonContracts = {
   CoreBranchBridgeAgent: '0x93A2a67010BCCc39e8A0B3E51bcB3D8aDF1DB83a',
   ERC20hTokenBranchFactory: '0x92dc9db1751f6668a504e4650a275d547c586a38',
   MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
-  MulticallBranchBridgeAgent: '0x93A2a67010BCCc39e8A0B3E51bcB3D8aDF1DB83a',
+  MulticallBranchBridgeAgent: '0x43F9bA5CCc690F1073E06765Bea8B24458565B66',
   MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
-  MulticallBranchBridgeAgentLibZip: '0x43F9bA5CCc690F1073E06765Bea8B24458565B66',
+  MulticallBranchBridgeAgentLibZip: '0xec6A60547A772F76718dC8990238dB9A415A4509',
   NativeToken: '0x5b05C18c3D30b23763891D4Bc27311999b2b8194',
 }
 
