@@ -35,7 +35,7 @@ export const TICK_SPACINGS: { [amount in FeeAmount]: number } = {
   [FeeAmount.HIGH]: 200,
 }
 
-// exports for external consumption
+// exports for external consumption.
 
 export enum TradeType {
   EXACT_INPUT,

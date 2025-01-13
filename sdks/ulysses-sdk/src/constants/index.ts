@@ -15,6 +15,7 @@ export const EVM_CHAIN_ID_TO_ROOT_CHAIN_ID: { [key in SupportedChainId]: Support
   [SupportedChainId.AVAX]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.METIS]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.BASE]: SupportedChainId.ARBITRUM_ONE,
+  [SupportedChainId.SONIC]: SupportedChainId.ARBITRUM_ONE,
 
   // [SupportedChainId.FANTOM]: SupportedChainId.ARBITRUM_ONE,
   // [SupportedChainId.SCROLL]: SupportedChainId.ARBITRUM_ONE,
@@ -27,7 +28,6 @@ export const EVM_CHAIN_ID_TO_ROOT_CHAIN_ID: { [key in SupportedChainId]: Support
   [SupportedChainId.ARBITRUM_SEPOLIA]: SupportedChainId.SEPOLIA,
   [SupportedChainId.OPTIMISM_SEPOLIA]: SupportedChainId.SEPOLIA,
   [SupportedChainId.BASE_SEPOLIA]: SupportedChainId.SEPOLIA,
-
   [SupportedChainId.POLYGON_AMOY]: SupportedChainId.SEPOLIA,
 
   // [SupportedChainId.FANTOM_TESTNET]: SupportedChainId.SEPOLIA,
@@ -200,10 +200,6 @@ export const DEFAULT_GAS_PARAMS: gasParamsMap = {
     gasLimit: JSBI.BigInt(600000).toString(),
     remoteBranchExecutionGas: JSBI.BigInt(1e17).toString(),
   },
-  // [SupportedChainId.FANTOM]: {
-  //   gasLimit: JSBI.BigInt(600000).toString(),
-  //   remoteBranchExecutionGas: JSBI.BigInt(1e17).toString(),
-  // },
   [SupportedChainId.BSC]: {
     gasLimit: JSBI.BigInt(600000).toString(),
     remoteBranchExecutionGas: JSBI.BigInt(1e16).toString(),
@@ -215,6 +211,10 @@ export const DEFAULT_GAS_PARAMS: gasParamsMap = {
   [SupportedChainId.METIS]: {
     gasLimit: JSBI.BigInt(600000).toString(),
     remoteBranchExecutionGas: JSBI.BigInt(1e16).toString(),
+  },
+  [SupportedChainId.SONIC]: {
+    gasLimit: JSBI.BigInt(600000).toString(),
+    remoteBranchExecutionGas: JSBI.BigInt(1e17).toString(),
   },
 
   // Testnets
