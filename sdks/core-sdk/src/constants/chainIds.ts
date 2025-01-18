@@ -51,7 +51,7 @@ export enum SupportedLayerzeroChainId {
   BSC = 102,
   AVAX = 106,
   METIS = 151,
-  SONIC = 146,
+  SONIC = 332,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 112,
