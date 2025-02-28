@@ -42,7 +42,7 @@ export const TalosAddresses: TalosAddressesType = {
     TalosStrategyStakedFactory: '0x17B4f847f9B071298f3eF0DAd5FCB20453bd537D',
     OptimizerFactory: '0x000000005De908d83F4b6072D388e3e9Fc543557',
     BoostAggregatorFactory: '0x223F3862F28848784432dc48346d133aBA94fbD4',
-    TalosManagerFactory: '0x6D8Cd89C13a34020e6cF4D42B4eB86D60c31571C',
+    TalosManagerFactory: '0xcE827EDa08C1f1A6BdDb4582B0759eF02c7FC3Ff',
     FlywheelCoreInstant: '0xfA7d81256a4fe221A2FD4abb090F2a33a2F956C5',
     TransferAll: '0x000067eadd040000d8ee00c1b9ca41ef920c005c',
   },
