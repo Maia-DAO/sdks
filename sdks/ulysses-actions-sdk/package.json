@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "@ethersproject/solidity": "^5.7.0",
-    "hermes-v2-sdk": "^0.1.2",
-    "maia-core-sdk": "1.0.51",
+    "hermes-v2-sdk": "^0.1.4",
+    "maia-core-sdk": "1.0.53",
     "maia-v2-sdk": "^0.0.8",
-    "talos-sdk": "^0.0.15",
-    "ulysses-sdk": "^0.0.115"
+    "talos-sdk": "^0.0.16",
+    "ulysses-sdk": "^0.0.111"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
