@@ -3,7 +3,7 @@ import { ERC20Token, GasParams, IMultipleDepositParams, ISingleDepositParams, IT
 
 import { IActionResult, IContextParameters } from '../utils'
 
-// TODO: MOVE THIS TO ULYSSES-SDK
+// TODO: MOVE THIS TO ULYSSES-SDK!
 export type ITokenInputParams = ISingleDepositParams | IMultipleDepositParams
 
 /**
