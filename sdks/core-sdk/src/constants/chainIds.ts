@@ -14,6 +14,7 @@ export enum SupportedChainId {
   AVAX = 43114,
   METIS = 1088,
   SONIC = 146,
+  BERA = 80094,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 250,
@@ -21,7 +22,6 @@ export enum SupportedChainId {
   // MANTLE = 5000,
   // FRAXTAL = 252,
   // GNOSIS = 100,
-  // // BERA = ,
 
   // Testnet chainIds
   SEPOLIA = 11155111, // ROOT_CHAIN_ID
@@ -52,6 +52,7 @@ export enum SupportedLayerzeroChainId {
   AVAX = 106,
   METIS = 151,
   SONIC = 332,
+  BERA = 362,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 112,
@@ -59,7 +60,6 @@ export enum SupportedLayerzeroChainId {
   // MANTLE = 181,
   // FRAXTAL = 255,
   // GNOSIS = 145,
-  // // BERA = ,
 
   // Testnet chainIds
   SEPOLIA = 10161, // ROOT_CHAIN_ID
@@ -94,6 +94,7 @@ export const LZ_CHAIN_ID_FROM_EVM_CHAIN_ID: chainIdMap = {
   [SupportedChainId.METIS]: SupportedLayerzeroChainId.METIS,
   [SupportedChainId.BASE]: SupportedLayerzeroChainId.BASE,
   [SupportedChainId.SONIC]: SupportedLayerzeroChainId.SONIC,
+  [SupportedChainId.BERA]: SupportedLayerzeroChainId.BERA,
 
   // [SupportedChainId.FANTOM]: SupportedLayerzeroChainId.FANTOM,
   // [SupportedChainId.SCROLL]: SupportedLayerzeroChainId.SCROLL,
@@ -128,6 +129,7 @@ export const EVM_CHAIN_ID_FROM_LZ_CHAIN_ID: chainIdMap = {
   [SupportedLayerzeroChainId.METIS]: SupportedChainId.METIS,
   [SupportedLayerzeroChainId.BASE]: SupportedChainId.BASE,
   [SupportedLayerzeroChainId.SONIC]: SupportedChainId.SONIC,
+  [SupportedLayerzeroChainId.BERA]: SupportedChainId.BERA,
 
   // [SupportedLayerzeroChainId.FANTOM]: SupportedChainId.FANTOM,
   // [SupportedLayerzeroChainId.SCROLL]: SupportedChainId.SCROLL,
