@@ -9046,8 +9046,8 @@ __metadata:
     "@ethersproject/abi": ^5.7.0
     "@types/jest": ^24.0.25
     "@uniswap/swap-router-contracts": ^1.3.0
-    hermes-v2-sdk: 0.1.5
-    maia-core-sdk: 1.0.55
+    hermes-v2-sdk: 0.1.7
+    maia-core-sdk: 1.0.56
     prettier: ^2.4.1
     tsdx: ^0.14.1
   languageName: unknown
@@ -9081,7 +9081,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"hermes-v2-sdk@npm:0.1.5, hermes-v2-sdk@npm:^0.1.5":
+"hermes-v2-sdk@npm:0.1.5":
   version: 0.1.5
   resolution: "hermes-v2-sdk@npm:0.1.5"
   dependencies:
@@ -9097,6 +9097,25 @@ __metadata:
     maia-core-sdk: ^1.0.55
     tiny-invariant: ^1.1.0
   checksum: 66234ff1cc69c4e102067f292efb46fa90fcfa639b526dec69ea1ce3e22b81c9bc43ebcf06bfdd9e83121fbbcf66bda377b1bae7261493d8e552d95e545b3823
+  languageName: node
+  linkType: hard
+
+"hermes-v2-sdk@npm:0.1.7, hermes-v2-sdk@npm:^0.1.7":
+  version: 0.1.7
+  resolution: "hermes-v2-sdk@npm:0.1.7"
+  dependencies:
+    "@ethersproject/abi": ^5.7.0
+    "@ethersproject/solidity": ^5.7.0
+    "@types/lodash.clonedeep": ^4.5.9
+    "@uniswap/swap-router-contracts": ^1.3.0
+    "@uniswap/v3-periphery": ^1.1.1
+    "@uniswap/v3-staker": 1.0.0
+    bignumber.js: ^9.0.2
+    jsbi: ^3.1.5
+    lodash.clonedeep: ^4.5.0
+    maia-core-sdk: ^1.0.56
+    tiny-invariant: ^1.1.0
+  checksum: 59d94e6236375e5e289ac8f9a09789b8db7d1fa0121bf32bc7957512db9af60fbb48502cf266cdaa0090c998ce77e71cec52a45cb2f8ff7446841b18d14a33f8
   languageName: node
   linkType: hard
 
@@ -16809,24 +16828,24 @@ __metadata:
   dependencies:
     "@ethersproject/solidity": ^5.7.0
     "@types/jest": ^24.0.25
-    hermes-v2-sdk: ^0.1.5
+    hermes-v2-sdk: ^0.1.7
     maia-core-sdk: 1.0.56
     maia-v2-sdk: ^0.0.8
     prettier: ^2.4.1
     talos-sdk: ^0.0.16
     tsdx: ^0.14.1
-    ulysses-sdk: ^0.0.117
+    ulysses-sdk: ^0.0.118
   languageName: unknown
   linkType: soft
 
-"ulysses-sdk@npm:^0.0.117":
-  version: 0.0.117
-  resolution: "ulysses-sdk@npm:0.0.117"
+"ulysses-sdk@npm:^0.0.118":
+  version: 0.0.118
+  resolution: "ulysses-sdk@npm:0.0.118"
   dependencies:
     "@ethersproject/abi": ^5.7.0
-    maia-core-sdk: ^1.0.55
+    maia-core-sdk: ^1.0.56
     solady: ^0.0.226
-  checksum: eccef89a72de170dbdc87ee8e5d1e9d1c484ecb7ae40b1b5f11928de35e48f9cc7c2021b4ab6d0ded2f1bf26b2eba9aac6fffb41363450d576459aeb85095668
+  checksum: 10ef840a142af2115b53e239f2289b5eb79571374c12cb9a82f82340ab53a7e6b32837320c5197779ab3673b6ea26bffd3798bba68eb6c1751e60a8dc0f30fe8
   languageName: node
   linkType: hard
 
