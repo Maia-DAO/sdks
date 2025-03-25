@@ -141,9 +141,9 @@ const UlyssesBera: IUlyssesCommonContracts = {
   CoreBranchBridgeAgent: '0x2132B6d41De5c767e507F017D310778441b50E94',
   ERC20hTokenBranchFactory: '0x7e157ce374a8533dc38b539d28e3c5b401cf8105',
   MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
-  MulticallBranchBridgeAgent: '0x98DA688f695f4d6Bd3D26fA9BF85A0Fe9EC50C6b',
+  MulticallBranchBridgeAgent: '0xF40Ae0899Bf756f198b51db0a9E2C59Cc12147A0',
   MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
-  MulticallBranchBridgeAgentLibZip: '0xF40Ae0899Bf756f198b51db0a9E2C59Cc12147A0',
+  MulticallBranchBridgeAgentLibZip: '0x98DA688f695f4d6Bd3D26fA9BF85A0Fe9EC50C6b',
   NativeToken: '0x6d4c20f6E27F5399888E25260b7a0e77e8f4d80d',
 }
 
