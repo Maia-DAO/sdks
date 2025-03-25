@@ -12,7 +12,7 @@ export const YEAR = 31536000
 export const POOL_INIT_CODE_HASH = '0xe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b54'
 
 /**
- * Represents the fee amount in bips for the pools.
+ * Represents the fee amount in bips for the Pools.
  * @param LOWEST - The lowest fee amount in bips. 100 bips = 0.01%.
  * @param LOW - The low fee amount in bips. 500 bips = 0.05%.
  * @param MEDIUM - The medium fee amount in bips. 3000 bips = 0.3%.
