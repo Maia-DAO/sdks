@@ -9115,7 +9115,7 @@ __metadata:
     bignumber.js: ^9.0.2
     jsbi: ^3.1.5
     lodash.clonedeep: ^4.5.0
-    maia-core-sdk: ^1.0.55
+    maia-core-sdk: ^1.0.56
     tiny-invariant: ^1.1.0
     tsdx: ^0.14.1
   languageName: unknown
@@ -11728,6 +11728,20 @@ __metadata:
     tiny-invariant: ^1.1.0
     toformat: ^2.0.0
   checksum: c6e4dd9c207056e839252e048918b22fccb874d7a265c33c9e77ad4cc43d062587655ec27a174476a6353c842ab4b1de748888d83fe6da27187460749a9433ed
+  languageName: node
+  linkType: hard
+
+"maia-core-sdk@npm:1.0.56, maia-core-sdk@npm:^1.0.56":
+  version: 1.0.56
+  resolution: "maia-core-sdk@npm:1.0.56"
+  dependencies:
+    "@ethersproject/address": ^5.7.0
+    big.js: ^5.2.2
+    decimal.js-light: ^2.5.0
+    jsbi: ^3.1.5
+    tiny-invariant: ^1.1.0
+    toformat: ^2.0.0
+  checksum: a6cdf6d56d028236281512f1af5a9b0818330545b1a1bfaa846cae3953ff7316a75a03b1e7949cfef24d8786e764816a242ee3c470e58e6eb27a88e98a23241c
   languageName: node
   linkType: hard
 
@@ -16796,7 +16810,7 @@ __metadata:
     "@ethersproject/solidity": ^5.7.0
     "@types/jest": ^24.0.25
     hermes-v2-sdk: ^0.1.5
-    maia-core-sdk: 1.0.55
+    maia-core-sdk: 1.0.56
     maia-v2-sdk: ^0.0.8
     prettier: ^2.4.1
     talos-sdk: ^0.0.16
