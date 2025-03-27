@@ -47,7 +47,7 @@ export enum SupportedLayerzeroChainId {
   MAINNET = 101,
   OPTIMISM = 111,
   BASE = 184,
-  POLYGON = 137,
+  POLYGON = 109,
   BSC = 102,
   AVAX = 106,
   METIS = 151,
