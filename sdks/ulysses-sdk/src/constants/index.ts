@@ -226,6 +226,10 @@ export const DEFAULT_GAS_PARAMS: gasParamsMap = {
     gasLimit: JSBI.BigInt(600000).toString(),
     remoteBranchExecutionGas: JSBI.BigInt(1e16).toString(),
   },
+  [SupportedChainId.SWELL]: {
+    gasLimit: JSBI.BigInt(600000).toString(),
+    remoteBranchExecutionGas: JSBI.BigInt(1e16).toString(),
+  },
 
   // Testnets
   [SupportedChainId.SEPOLIA]: {
