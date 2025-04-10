@@ -18,11 +18,11 @@ export const EVM_CHAIN_ID_TO_ROOT_CHAIN_ID: { [key in SupportedChainId]: Support
   [SupportedChainId.SONIC]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.BERA]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.FRAXTAL]: SupportedChainId.ARBITRUM_ONE,
+  [SupportedChainId.SWELL]: SupportedChainId.ARBITRUM_ONE,
 
   // [SupportedChainId.FANTOM]: SupportedChainId.ARBITRUM_ONE,
   // [SupportedChainId.SCROLL]: SupportedChainId.ARBITRUM_ONE,
   // [SupportedChainId.MANTLE]: SupportedChainId.ARBITRUM_ONE,
-  // [SupportedChainId.FRAXTAL]: SupportedChainId.ARBITRUM_ONE,
   // [SupportedChainId.GNOSIS]: SupportedChainId.ARBITRUM_ONE,
 
   //Testnets
