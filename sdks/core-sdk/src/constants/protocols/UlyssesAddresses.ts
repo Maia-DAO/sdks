@@ -160,6 +160,19 @@ const UlyssesFraxtal: IUlyssesCommonContracts = {
   NativeToken: '0x5AA82E672e31bb936abdaa527fb643B0BEcf1A13',
 }
 
+const UlyssesSwell: IUlyssesCommonContracts = {
+  BranchPort: '0x0000151d008235A6cC00004F00FA2bDF9dF95400',
+  BranchBridgeAgentFactory: '0x7eA5c2F737c54D9E6Eb6fE71F13Ca834fF407079',
+  CoreBranchRouter: '0xd0f74CbB2a5f67F48E10F7B5e293e0f78B79B599',
+  CoreBranchBridgeAgent: '0x04abb38a64B932F0C5316BF70b639a9AfF14a8E5',
+  ERC20hTokenBranchFactory: '0xA0320af5c9a8e3CC2A7205e833b38c05872B7098',
+  MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
+  MulticallBranchBridgeAgent: '0x39cd99411CA6f2a01bceDA964F27D043025230d3',
+  MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
+  MulticallBranchBridgeAgentLibZip: '0x7E424dd1f354Cfd5cba2f213f842E2290A58F7AA',
+  NativeToken: '0xCc74BDF637fAAA6717270E2491b274B158bC5ea9',
+}
+
 // TESTNET - Ulysses Omnichain Address Definitions per Chain
 
 const UlyssesSepoliaBranch: IUlyssesCommonContracts = {
@@ -253,6 +266,7 @@ export const Ulysses: IUlysses = {
   [SupportedChainId.SONIC]: UlyssesSonic,
   [SupportedChainId.BERA]: UlyssesBera,
   [SupportedChainId.FRAXTAL]: UlyssesFraxtal,
+  [SupportedChainId.SWELL]: UlyssesSwell,
 
   // [SupportedChainId.FANTOM]: UlyssesEthereum,
   // [SupportedChainId.SCROLL]: UlyssesEthereum,

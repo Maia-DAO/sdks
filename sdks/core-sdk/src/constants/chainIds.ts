@@ -16,6 +16,7 @@ export enum SupportedChainId {
   SONIC = 146,
   BERA = 80094,
   FRAXTAL = 252,
+  SWELL = 1923,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 250,
@@ -55,6 +56,7 @@ export enum SupportedLayerzeroChainId {
   SONIC = 332,
   BERA = 362,
   FRAXTAL = 255,
+  SWELL = 335,
 
   // Not shown in UI. But has contracts deployed
   // FANTOM = 112,
@@ -98,6 +100,7 @@ export const LZ_CHAIN_ID_FROM_EVM_CHAIN_ID: chainIdMap = {
   [SupportedChainId.SONIC]: SupportedLayerzeroChainId.SONIC,
   [SupportedChainId.BERA]: SupportedLayerzeroChainId.BERA,
   [SupportedChainId.FRAXTAL]: SupportedLayerzeroChainId.FRAXTAL,
+  [SupportedChainId.SWELL]: SupportedLayerzeroChainId.SWELL,
 
   // [SupportedChainId.FANTOM]: SupportedLayerzeroChainId.FANTOM,
   // [SupportedChainId.SCROLL]: SupportedLayerzeroChainId.SCROLL,
@@ -134,6 +137,7 @@ export const EVM_CHAIN_ID_FROM_LZ_CHAIN_ID: chainIdMap = {
   [SupportedLayerzeroChainId.SONIC]: SupportedChainId.SONIC,
   [SupportedLayerzeroChainId.BERA]: SupportedChainId.BERA,
   [SupportedLayerzeroChainId.FRAXTAL]: SupportedChainId.FRAXTAL,
+  [SupportedLayerzeroChainId.SWELL]: SupportedChainId.SWELL,
 
   // [SupportedLayerzeroChainId.FANTOM]: SupportedChainId.FANTOM,
   // [SupportedLayerzeroChainId.SCROLL]: SupportedChainId.SCROLL,
