@@ -17,6 +17,7 @@ export const EVM_CHAIN_ID_TO_ROOT_CHAIN_ID: { [key in SupportedChainId]: Support
   [SupportedChainId.BASE]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.SONIC]: SupportedChainId.ARBITRUM_ONE,
   [SupportedChainId.BERA]: SupportedChainId.ARBITRUM_ONE,
+  [SupportedChainId.FRAXTAL]: SupportedChainId.ARBITRUM_ONE,
 
   // [SupportedChainId.FANTOM]: SupportedChainId.ARBITRUM_ONE,
   // [SupportedChainId.SCROLL]: SupportedChainId.ARBITRUM_ONE,
@@ -220,6 +221,10 @@ export const DEFAULT_GAS_PARAMS: gasParamsMap = {
   [SupportedChainId.BERA]: {
     gasLimit: JSBI.BigInt(600000).toString(),
     remoteBranchExecutionGas: JSBI.BigInt(1e17).toString(),
+  },
+  [SupportedChainId.FRAXTAL]: {
+    gasLimit: JSBI.BigInt(600000).toString(),
+    remoteBranchExecutionGas: JSBI.BigInt(1e16).toString(),
   },
 
   // Testnets
