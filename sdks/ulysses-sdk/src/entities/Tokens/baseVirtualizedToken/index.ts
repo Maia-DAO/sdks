@@ -1,17 +1,6 @@
 import { Currency, NativeToken } from 'maia-core-sdk'
 
 /**
- * LOCAL: Refers to the local hToken that is used as a "ticket" in the branch chain.
- * GLOBAL: Referes to the global hToken, represented in Arbitrum chain, that is used throughout the Hermes omnichain ecosystem.
- * ULYSSES: Referes to the unified token. Eg. uETH (unified ETH from Ethereum, Optimism and Arbitrum)
- */
-export enum TokenType {
-  LOCAL,
-  GLOBAL,
-  ULYSSES,
-}
-
-/**
  *
  * A virtualized token is any token native to the chain or not, and is being used in the ulysses system.
  * This includes local and global tokens.

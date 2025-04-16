@@ -1,6 +1,6 @@
 import { Currency, SupportedChainId } from 'maia-core-sdk'
 
-import { BaseVirtualizedToken, TokenType } from '../baseVirtualizedToken'
+import { BaseVirtualizedToken } from '../baseVirtualizedToken'
 import { GlobalToken } from '../globalToken'
 
 /**
