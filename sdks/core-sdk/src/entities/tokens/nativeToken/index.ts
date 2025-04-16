@@ -10,11 +10,28 @@ import { BaseCurrency } from '../baseCurrency'
 export class NativeToken extends BaseCurrency {
   public readonly isNative: false = false as const
   public readonly isToken: true = true as const
+  public readonly isGlobal: boolean = false as const
 
   /**
    * The contract address on the chain on which this token lives
    */
   public readonly address: string
+
+  /**
+   * True if token is an OFT (Omnichain Fungible Token)
+   *
+   * @type {boolean}
+   * @memberof BaseVirtualizedToken
+   */
+  public readonly isOFT: boolean
+
+  /**
+   * True if token is supported by Across
+   *
+   * @type {boolean}
+   * @memberof BaseVirtualizedToken
+   */
+  public readonly isAcross: boolean
 
   /**
    *
@@ -31,7 +48,9 @@ export class NativeToken extends BaseCurrency {
     decimals: number,
     symbol?: string,
     name?: string,
-    bypassChecksum?: boolean
+    bypassChecksum?: boolean,
+    isOFT?: boolean,
+    isAcross?: boolean
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
@@ -39,6 +58,9 @@ export class NativeToken extends BaseCurrency {
     } else {
       this.address = validateAndParseAddress(address)
     }
+
+    this.isOFT = isOFT ?? false
+    this.isAcross = isAcross ?? false
   }
 
   /**
