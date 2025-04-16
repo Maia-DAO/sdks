@@ -22,17 +22,8 @@ export enum TokenType {
  */
 export abstract class BaseVirtualizedToken extends NativeToken {
   /**
-   * Type of the virtualized token.
+   * Underlying currency that the virtualized token represents.
    *
-   * @abstract
-   * @type {TokenType}
-   * @memberof BaseVirtualizedToken
-   */
-  public abstract readonly tokenType?: TokenType
-
-  /**
-   *
-   * Underyling currency that the virtualized token represents.
    * @type {Currency}
    * @memberof BaseVirtualizedToken
    */

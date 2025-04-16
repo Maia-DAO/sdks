@@ -13,12 +13,11 @@ import { GlobalToken } from '../globalToken'
  */
 export class LocalToken extends BaseVirtualizedToken {
   /**
-   * Sets the token type to LOCAL
-   * @type {TokenType}
+   * The global token that this local token represents.
+   *
+   * @type {GlobalToken}
    * @memberof LocalToken
    */
-  public readonly tokenType: TokenType = TokenType.LOCAL
-
   public readonly globalToken: GlobalToken
 
   public constructor(

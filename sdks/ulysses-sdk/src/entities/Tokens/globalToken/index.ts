@@ -1,6 +1,6 @@
 import { Currency, SupportedChainId } from 'maia-core-sdk'
 
-import { BaseVirtualizedToken, TokenType } from '../baseVirtualizedToken'
+import { BaseVirtualizedToken } from '../baseVirtualizedToken'
 
 /**
  * Represents the token that is virtualized in Arbitrum.
@@ -8,10 +8,7 @@ import { BaseVirtualizedToken, TokenType } from '../baseVirtualizedToken'
  * These tokens can be accessed through the user EOA if he's on Arbitrum, or indirectly through the Virtual Account belonging to the user.
  */
 export class GlobalToken extends BaseVirtualizedToken {
-  /**
-   * Sets the type of the token.
-   */
-  public readonly tokenType?: TokenType = TokenType.GLOBAL
+  public readonly isGlobal: true = true as const
 
   /**
    * Holds the mapping of chainId => local hToken address
