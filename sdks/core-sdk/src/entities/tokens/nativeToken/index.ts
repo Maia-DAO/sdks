@@ -7,11 +7,11 @@ import { BaseCurrency } from '../baseCurrency'
 /**
  * Represents an ERC20 token with a unique address and some metadata native to a given chain.
  */
-export class NativeToken extends BaseCurrency {
+export class NativeToken extends BaseCurrency<false> {
   public readonly isNative: false = false as const
   public readonly isToken: true = true as const
 
-  public readonly isGlobal: boolean = false as const
+  public readonly isGlobal = false as const
   public readonly isOFT: boolean
   public readonly isAcross: boolean
 
