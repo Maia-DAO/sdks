@@ -23,11 +23,11 @@ export class NativeToken extends BaseCurrency {
   /**
    *
    * @param chainId {@link BaseCurrency#chainId}
-   * @param address The contract address on the chain on which this token lives
+   * @param address The contract address on the chain on which this token lives.
    * @param decimals {@link BaseCurrency#decimals}
    * @param symbol {@link BaseCurrency#symbol}
    * @param name {@link BaseCurrency#name}
-   * @param bypassChecksum If true it only checks for length === 42, startsWith 0x and contains only hex characters
+   * @param bypassChecksum If true it only checks for length === 42, startsWith 0x and contains only hex characters.
    */
   public constructor(
     chainId: number,
