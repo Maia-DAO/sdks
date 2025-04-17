@@ -11,7 +11,7 @@ export class NativeToken extends BaseCurrency {
   public readonly isNative: false = false as const
   public readonly isToken: true = true as const
 
-  public readonly isGlobal: false = false as const
+  public readonly isGlobal: boolean = false as const
   public readonly isOFT: boolean
   public readonly isAcross: boolean
 

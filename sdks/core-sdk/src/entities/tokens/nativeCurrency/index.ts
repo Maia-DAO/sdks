@@ -7,7 +7,7 @@ export abstract class NativeCurrency extends BaseCurrency {
   public readonly isNative: true = true as const
   public readonly isToken: false = false as const
 
-  public readonly isGlobal: boolean = false as const
+  public readonly isGlobal: false = false as const
   public readonly isOFT: false = false as const
   public readonly isAcross: false = false as const
 }
