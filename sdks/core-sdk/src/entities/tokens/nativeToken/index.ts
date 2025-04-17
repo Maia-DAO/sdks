@@ -16,7 +16,7 @@ export class NativeToken extends BaseCurrency {
   public readonly isAcross: boolean
 
   /**
-   * The contract address on the chain on which this token lives
+   * The contract address on the chain on which this token lives.
    */
   public readonly address: string
 
