@@ -15,6 +15,18 @@ export abstract class BaseCurrency {
    * Returns whether the currency is a token that is usable in Uniswap without wrapping
    */
   public abstract readonly isToken: boolean
+  /**
+   * Returns whether the currency is a global token that has wrappers on different chains
+   */
+  public abstract readonly isGlobal: boolean
+  /**
+   * True if token is an OFT (Omnichain Fungible Token)
+   */
+  public abstract readonly isOFT: boolean
+  /**
+   * True if token is supported by Across
+   */
+  public abstract readonly isAcross: boolean
 
   /**
    * The chain ID on which this currency resides

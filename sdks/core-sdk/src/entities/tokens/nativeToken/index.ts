@@ -10,28 +10,15 @@ import { BaseCurrency } from '../baseCurrency'
 export class NativeToken extends BaseCurrency {
   public readonly isNative: false = false as const
   public readonly isToken: true = true as const
-  public readonly isGlobal: boolean = false as const
+
+  public readonly isGlobal: false = false as const
+  public readonly isOFT: boolean
+  public readonly isAcross: boolean
 
   /**
    * The contract address on the chain on which this token lives
    */
   public readonly address: string
-
-  /**
-   * True if token is an OFT (Omnichain Fungible Token)
-   *
-   * @type {boolean}
-   * @memberof BaseVirtualizedToken
-   */
-  public readonly isOFT: boolean
-
-  /**
-   * True if token is supported by Across
-   *
-   * @type {boolean}
-   * @memberof BaseVirtualizedToken
-   */
-  public readonly isAcross: boolean
 
   /**
    *
