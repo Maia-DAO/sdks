@@ -44,4 +44,17 @@ export class GlobalToken extends BaseVirtualizedToken {
   public getChainTokenAddress(chainId: SupportedChainId) {
     return this.hTokensPerChain?.get(chainId)
   }
+
+  /**
+   * Returns true if token is Ecosystem token(i.e. the wrapped token is the same as the underlying token)
+   * @param currency token to check
+   * @returns true if token is Ecosystem token
+   *
+   */
+  public isEcosystemToken(currency: GlobalToken) {
+    return (
+      currency.wrapped.address === currency.underlyingCurrency.wrapped.address &&
+      currency.chainId === currency.underlyingCurrency.chainId
+    )
+  }
 }
