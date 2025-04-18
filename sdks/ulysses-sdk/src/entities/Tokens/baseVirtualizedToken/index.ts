@@ -1,4 +1,4 @@
-import { Currency, BaseNativeToken } from 'maia-core-sdk'
+import { Currency, NativeToken } from 'maia-core-sdk'
 
 /**
  *
@@ -6,13 +6,10 @@ import { Currency, BaseNativeToken } from 'maia-core-sdk'
  * This includes local and global tokens.
  * @export
  * @abstract
- * @class BaseVirtualizedToken.
+ * @class BaseVirtualizedToken
  * @extends {NativeToken} - This just means that the token is not a gas token.
  */
-export abstract class BaseVirtualizedToken extends BaseNativeToken {
-  public readonly isOFT: false = false as const
-  public readonly isAcross: false = false as const
-
+export abstract class BaseVirtualizedToken extends NativeToken {
   /**
    * Underlying currency that the virtualized token represents.
    *
