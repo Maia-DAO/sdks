@@ -1,4 +1,4 @@
-import { Currency, NativeToken } from 'maia-core-sdk'
+import { Currency, BaseNativeToken } from 'maia-core-sdk'
 
 /**
  *
@@ -9,7 +9,7 @@ import { Currency, NativeToken } from 'maia-core-sdk'
  * @class BaseVirtualizedToken.
  * @extends {NativeToken} - This just means that the token is not a gas token.
  */
-export abstract class BaseVirtualizedToken extends NativeToken {
+export abstract class BaseVirtualizedToken extends BaseNativeToken {
   public readonly isOFT: false = false as const
   public readonly isAcross: false = false as const
 

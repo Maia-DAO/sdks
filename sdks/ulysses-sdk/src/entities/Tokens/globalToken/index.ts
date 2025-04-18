@@ -8,7 +8,7 @@ import { BaseVirtualizedToken } from '../baseVirtualizedToken'
  * These tokens can be accessed through the user EOA if he's on Arbitrum, or indirectly through the Virtual Account belonging to the user.
  */
 export class GlobalToken extends BaseVirtualizedToken {
-  // public readonly isGlobal: true = true as const
+  public readonly isGlobal: true = true as const
 
   /**
    * Holds the mapping of chainId => local hToken address
