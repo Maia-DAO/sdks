@@ -6,7 +6,7 @@ import { BaseCurrency } from '../baseCurrency'
 import { checkValidAddress, validateAndParseAddress } from '../../../utils'
 
 /**
- * A currency is any fungible financial instrument, including Ether, all ERC20 tokens, and other chain-native currencies
+ * A currency is any fungible financial instrument, including Ether, all ERC20 tokens, and other chain-native currencies.
  */
 export abstract class BaseNativeToken extends BaseCurrency {
   public readonly isNative: false = false as const
