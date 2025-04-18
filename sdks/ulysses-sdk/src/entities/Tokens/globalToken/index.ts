@@ -51,10 +51,10 @@ export class GlobalToken extends BaseVirtualizedToken {
    * @returns true if token is Ecosystem token
    *
    */
-  public isEcosystemToken(currency: GlobalToken) {
+  public isEcosystemToken() {
     return (
-      currency.wrapped.address === currency.underlyingCurrency.wrapped.address &&
-      currency.chainId === currency.underlyingCurrency.chainId
+      this.wrapped.address === this.underlyingCurrency.wrapped.address &&
+      this.chainId === this.underlyingCurrency.chainId
     )
   }
 }
