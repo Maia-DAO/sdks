@@ -1,4 +1,3 @@
-import { BaseCurrency } from '../baseCurrency'
 import { BaseNativeToken } from '../baseNativeToken'
 
 /**
