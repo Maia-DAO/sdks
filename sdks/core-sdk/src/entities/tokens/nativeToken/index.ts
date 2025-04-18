@@ -1,24 +1,13 @@
-import invariant from 'tiny-invariant'
-
-import { checkValidAddress, validateAndParseAddress } from '../../../utils/addresses/validateAndParseAddress'
-import type { Currency } from '../../tokens/currency'
 import { BaseCurrency } from '../baseCurrency'
+import { BaseNativeToken } from '../baseNativeToken'
 
 /**
  * Represents an ERC20 token with a unique address and some metadata native to a given chain.
  */
-export class NativeToken extends BaseCurrency<false> {
-  public readonly isNative: false = false as const
-  public readonly isToken: true = true as const
-
-  public readonly isGlobal = false as const
+export class NativeToken extends BaseNativeToken {
+  public readonly isGlobal: false = false as const
   public readonly isOFT: boolean
   public readonly isAcross: boolean
-
-  /**
-   * The contract address on the chain on which this token lives.
-   */
-  public readonly address: string
 
   /**
    *
@@ -39,35 +28,10 @@ export class NativeToken extends BaseCurrency<false> {
     isOFT?: boolean,
     isAcross?: boolean
   ) {
-    super(chainId, decimals, symbol, name)
-    if (bypassChecksum) {
-      this.address = checkValidAddress(address)
-    } else {
-      this.address = validateAndParseAddress(address)
-    }
+    super(chainId, address, decimals, symbol, name, bypassChecksum)
 
     this.isOFT = isOFT ?? false
     this.isAcross = isAcross ?? false
-  }
-
-  /**
-   * Returns true if the two tokens are equivalent, i.e. have the same chainId and address.
-   * @param other other token to compare
-   */
-  public equals(other: Currency): boolean {
-    return other.isToken && this.chainId === other.chainId && this.address.toLowerCase() === other.address.toLowerCase()
-  }
-
-  /**
-   * Returns true if the address of this token sorts before the address of the other token
-   * @param other other token to compare
-   * @throws if the tokens have the same address
-   * @throws if the tokens are on different chains
-   */
-  public sortsBefore(other: NativeToken): boolean {
-    invariant(this.chainId === other.chainId, 'CHAIN_IDS')
-    invariant(this.address.toLowerCase() !== other.address.toLowerCase(), 'ADDRESSES')
-    return this.address.toLowerCase() < other.address.toLowerCase()
   }
 
   /**

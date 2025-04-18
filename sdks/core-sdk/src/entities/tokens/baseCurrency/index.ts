@@ -6,7 +6,7 @@ import { NativeToken } from '../nativeToken'
 /**
  * A currency is any fungible financial instrument, including Ether, all ERC20 tokens, and other chain-native currencies
  */
-export abstract class BaseCurrency<IGlobal extends boolean = false> {
+export abstract class BaseCurrency {
   /**
    * Returns whether the currency is native to the chain and must be wrapped (e.g. Ether)
    */
@@ -15,18 +15,6 @@ export abstract class BaseCurrency<IGlobal extends boolean = false> {
    * Returns whether the currency is a token that is usable in Uniswap without wrapping
    */
   public abstract readonly isToken: boolean
-  /**
-   * Returns whether the currency is a global token that has wrappers on different chains
-   */
-  public abstract readonly isGlobal: IGlobal
-  /**
-   * True if token is an OFT (Omnichain Fungible Token)
-   */
-  public abstract readonly isOFT: boolean
-  /**
-   * True if token is supported by Across
-   */
-  public abstract readonly isAcross: boolean
 
   /**
    * The chain ID on which this currency resides
