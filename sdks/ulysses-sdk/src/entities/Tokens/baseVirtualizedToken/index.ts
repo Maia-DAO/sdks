@@ -6,7 +6,7 @@ import { Currency, BaseNativeToken } from 'maia-core-sdk'
  * This includes local and global tokens.
  * @export
  * @abstract
- * @class BaseVirtualizedToken
+ * @class BaseVirtualizedToken.
  * @extends {NativeToken} - This just means that the token is not a gas token.
  */
 export abstract class BaseVirtualizedToken extends BaseNativeToken {
