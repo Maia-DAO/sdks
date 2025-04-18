@@ -12,6 +12,8 @@ import { GlobalToken } from '../globalToken'
  * @extends {BaseVirtualizedToken}
  */
 export class LocalToken extends BaseVirtualizedToken {
+  public readonly isGlobal: false = false as const
+
   /**
    * The global token that this local token represents.
    *
