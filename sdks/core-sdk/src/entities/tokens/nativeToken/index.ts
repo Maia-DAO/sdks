@@ -14,6 +14,10 @@ export class NativeToken extends BaseCurrency {
   public readonly isGlobal: boolean = false as const
   public readonly isOFT: boolean
   public readonly isAcross: boolean
+  public readonly oftAdapter?: string
+  public readonly oftVersion?: number
+  public readonly endpointVersion?: number
+  public readonly oftSharedDecimals?: number
 
   /**
    * The contract address on the chain on which this token lives.
@@ -28,6 +32,12 @@ export class NativeToken extends BaseCurrency {
    * @param symbol {@link BaseCurrency#symbol}
    * @param name {@link BaseCurrency#name}
    * @param bypassChecksum If true it only checks for length === 42, startsWith 0x and contains only hex characters.
+   * @param isAcross If true, the token is supported by Across
+   * @param isOFT If true, the token is an OFT (Omnichain Fungible Token)
+   * @param oftAdapter The address of the token's OFT adapter, if applicable
+   * @param oftVersion The version of the OFT (Omnichain Fungible Token)
+   * @param endpointVersion The version of the Layer Zero endpoint used
+   * @param oftSharedDecimals The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
    */
   public constructor(
     chainId: number,
@@ -36,8 +46,12 @@ export class NativeToken extends BaseCurrency {
     symbol?: string,
     name?: string,
     bypassChecksum?: boolean,
+    isAcross?: boolean,
     isOFT?: boolean,
-    isAcross?: boolean
+    oftAdapter?: string,
+    oftVersion?: number,
+    endpointVersion?: number,
+    oftSharedDecimals?: number
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
@@ -46,8 +60,13 @@ export class NativeToken extends BaseCurrency {
       this.address = validateAndParseAddress(address)
     }
 
-    this.isOFT = isOFT ?? false
     this.isAcross = isAcross ?? false
+    this.isOFT = isOFT ?? false
+
+    this.oftAdapter = oftAdapter ?? undefined
+    this.oftVersion = oftVersion ?? undefined
+    this.endpointVersion = endpointVersion ?? undefined
+    this.oftSharedDecimals = oftSharedDecimals ?? undefined
   }
 
   /**

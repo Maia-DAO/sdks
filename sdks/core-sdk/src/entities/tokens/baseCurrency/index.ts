@@ -20,13 +20,29 @@ export abstract class BaseCurrency {
    */
   public abstract readonly isGlobal: boolean
   /**
+   * True if token is supported by Across
+   */
+  public abstract readonly isAcross: boolean
+  /**
    * True if token is an OFT (Omnichain Fungible Token)
    */
   public abstract readonly isOFT: boolean
   /**
-   * True if token is supported by Across
+   * The address of the token's OFT adapter, if applicable
    */
-  public abstract readonly isAcross: boolean
+  public abstract readonly oftAdapter?: string
+  /**
+   * The version of the OFT (Omnichain Fungible Token)
+   */
+  public abstract readonly oftVersion?: number
+  /**
+   * The version of the Layer Zero endpoint used
+   */
+  public abstract readonly endpointVersion?: number
+  /**
+   * The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
+   */
+  public abstract readonly oftSharedDecimals?: number
 
   /**
    * The chain ID on which this currency resides
