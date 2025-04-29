@@ -10,8 +10,6 @@ export interface TokenInfo {
   readonly symbol: string
   readonly logoURI?: string
   readonly tags?: string[]
-  readonly isOFT?: boolean
-  readonly isAcross?: boolean
   readonly extensions?: {
     readonly [key: string]:
       | {
@@ -23,6 +21,12 @@ export interface TokenInfo {
         }
       | ExtensionValue
   }
+  readonly isAcross?: boolean
+  readonly isOFT?: boolean
+  readonly oftAdapter?: string
+  readonly oftVersion?: number
+  readonly endpointVersion?: number
+  readonly oftSharedDecimals?: number
 }
 
 export interface RootTokenInfo {
@@ -33,8 +37,6 @@ export interface RootTokenInfo {
   readonly symbol: string
   readonly logoURI?: string
   readonly tags?: string[]
-  readonly isOFT?: boolean
-  readonly isAcross?: boolean
   readonly extensions?: {
     readonly [key: string]:
       | {
@@ -46,6 +48,12 @@ export interface RootTokenInfo {
         }
       | ExtensionValue
   }
+  readonly isAcross?: boolean
+  readonly isOFT?: boolean
+  readonly oftAdapter?: string
+  readonly oftVersion?: number
+  readonly endpointVersion?: number
+  readonly oftSharedDecimals?: number
 }
 
 export interface Version {
