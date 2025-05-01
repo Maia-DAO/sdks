@@ -40,9 +40,17 @@ export abstract class BaseCurrency {
    */
   public abstract readonly endpointVersion?: number
   /**
-   * The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
+   * The ID of the Layer Zero endpoint used
+   */
+  public abstract readonly endpointId?: number
+  /**
+   * The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system
    */
   public abstract readonly oftSharedDecimals?: number
+  /**
+   * The OFT bridging fee per chain in bips, if applicable
+   */
+  public abstract readonly oftFee?: { [chain: number]: { oftFee: number } }
 
   /**
    * The chain ID on which this currency resides

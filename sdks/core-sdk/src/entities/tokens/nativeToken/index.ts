@@ -17,7 +17,9 @@ export class NativeToken extends BaseCurrency {
   public readonly oftAdapter?: string
   public readonly oftVersion?: number
   public readonly endpointVersion?: number
+  public readonly endpointId?: number
   public readonly oftSharedDecimals?: number
+  public readonly oftFee?: { [chain: number]: { oftFee: number } }
 
   /**
    * The contract address on the chain on which this token lives.
@@ -37,7 +39,9 @@ export class NativeToken extends BaseCurrency {
    * @param oftAdapter The address of the token's OFT adapter, if applicable
    * @param oftVersion The version of the OFT (Omnichain Fungible Token)
    * @param endpointVersion The version of the Layer Zero endpoint used
+   * @param endpointId The ID of the Layer Zero endpoint used
    * @param oftSharedDecimals The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
+   * @param oftFee The OFT bridging fee per chain in bips, if applicable
    */
   public constructor(
     chainId: number,
@@ -51,7 +55,9 @@ export class NativeToken extends BaseCurrency {
     oftAdapter?: string,
     oftVersion?: number,
     endpointVersion?: number,
-    oftSharedDecimals?: number
+    endpointId?: number,
+    oftSharedDecimals?: number,
+    oftFee?: { [chain: number]: { oftFee: number } }
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
@@ -67,6 +73,8 @@ export class NativeToken extends BaseCurrency {
     this.oftVersion = oftVersion ?? undefined
     this.endpointVersion = endpointVersion ?? undefined
     this.oftSharedDecimals = oftSharedDecimals ?? undefined
+    this.endpointId = endpointId ?? undefined
+    this.oftFee = oftFee ?? undefined
   }
 
   /**

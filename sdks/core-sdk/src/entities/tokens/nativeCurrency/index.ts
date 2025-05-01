@@ -15,5 +15,7 @@ export abstract class NativeCurrency extends BaseCurrency {
   public readonly oftAdapter = undefined
   public readonly oftVersion = undefined
   public readonly endpointVersion = undefined
+  public readonly endpointId = undefined
   public readonly oftSharedDecimals = undefined
+  public readonly oftFee = undefined
 }
