@@ -26,6 +26,7 @@ export interface TokenInfo {
   readonly oftAdapter?: string
   readonly oftVersion?: number
   readonly endpointVersion?: number
+  readonly endpointId?: number
   readonly oftSharedDecimals?: number
 }
 
@@ -53,6 +54,7 @@ export interface RootTokenInfo {
   readonly oftAdapter?: string
   readonly oftVersion?: number
   readonly endpointVersion?: number
+  readonly endpointId?: number
   readonly oftSharedDecimals?: number
 }
 
