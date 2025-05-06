@@ -50,7 +50,7 @@ export abstract class BaseCurrency {
   /**
    * The OFT bridging fee per chain in bips, if applicable
    */
-  public abstract readonly oftFee?: { [chain: number]: { oftFee: number } }
+  public abstract readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
 
   /**
    * The chain ID on which this currency resides
