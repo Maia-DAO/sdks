@@ -142,7 +142,6 @@ export const EVM_CHAIN_ID_FROM_LZ_CHAIN_ID: chainIdMap = {
   // [SupportedLayerzeroChainId.FANTOM]: SupportedChainId.FANTOM,
   // [SupportedLayerzeroChainId.SCROLL]: SupportedChainId.SCROLL,
   // [SupportedLayerzeroChainId.MANTLE]: SupportedChainId.MANTLE,
-  // [SupportedLayerzeroChainId.FRAXTAL]: SupportedChainId.FRAXTAL,
   // [SupportedLayerzeroChainId.GNOSIS]: SupportedChainId.GNOSIS,
 
   //Testnets

@@ -271,7 +271,6 @@ export const Ulysses: IUlysses = {
   // [SupportedChainId.FANTOM]: UlyssesEthereum,
   // [SupportedChainId.SCROLL]: UlyssesEthereum,
   // [SupportedChainId.MANTLE]: UlyssesEthereum,
-  // [SupportedChainId.FRAXTAL]: UlyssesEthereum,
   // [SupportedChainId.GNOSIS]: UlyssesEthereum,
 
   // Testnets
