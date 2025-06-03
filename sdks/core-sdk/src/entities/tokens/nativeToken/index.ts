@@ -21,6 +21,7 @@ export class NativeToken extends BaseCurrency {
   public readonly oftSharedDecimals?: number
   public readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
   public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
+  public readonly acrossInfo?: { [chain: number]: { tokenAddress?: string } }
 
   /**
    * The contract address on the chain on which this token lives.
@@ -44,6 +45,7 @@ export class NativeToken extends BaseCurrency {
    * @param oftSharedDecimals The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
    * @param oftFee The OFT bridging fee and minimum destination gas per chain in bips, if applicable
    * @param oftPeers The OFT's connected peers
+   * @param acrossInfo The across connected peers
    */
   public constructor(
     chainId: number,
@@ -60,7 +62,8 @@ export class NativeToken extends BaseCurrency {
     endpointId?: number,
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string } }
+    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    acrossInfo?: { [chain: number]: { tokenAddress?: string } }
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
@@ -79,6 +82,7 @@ export class NativeToken extends BaseCurrency {
     this.endpointId = endpointId ?? undefined
     this.oftFee = oftFee ?? undefined
     this.oftPeers = oftPeers ?? undefined
+    this.acrossInfo = acrossInfo ?? undefined
   }
 
   /**
