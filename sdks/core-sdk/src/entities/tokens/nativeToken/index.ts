@@ -21,7 +21,7 @@ export class NativeToken extends BaseCurrency {
   public readonly oftSharedDecimals?: number
   public readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
   public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
-  public readonly acrossInfo?: { [chain: number]: { tokenAddress?: string } }
+  public readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
 
   /**
    * The contract address on the chain on which this token lives.
@@ -63,7 +63,7 @@ export class NativeToken extends BaseCurrency {
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
     oftPeers?: { [chain: number]: { tokenAddress?: string } },
-    acrossInfo?: { [chain: number]: { tokenAddress?: string } }
+    acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {

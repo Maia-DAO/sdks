@@ -58,7 +58,7 @@ export abstract class BaseCurrency {
   /**
    * The OFT's connected peers
    */
-  public abstract readonly acrossInfo?: { [chain: number]: { tokenAddress?: string } }
+  public abstract readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
 
   /**
    * The chain ID on which this currency resides
