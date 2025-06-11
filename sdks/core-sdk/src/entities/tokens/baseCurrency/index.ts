@@ -59,6 +59,10 @@ export abstract class BaseCurrency {
    * The OFT's connected peers
    */
   public abstract readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
+  /**
+   * The price source for the token, if applicable
+   */
+  public abstract readonly priceSource?: { address?: string; chainId: number }
 
   /**
    * The chain ID on which this currency resides

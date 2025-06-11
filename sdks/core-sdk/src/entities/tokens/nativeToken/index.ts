@@ -23,6 +23,8 @@ export class NativeToken extends BaseCurrency {
   public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
   public readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
 
+  public readonly priceSource?: { address?: string; chainId: number }
+
   /**
    * The contract address on the chain on which this token lives.
    */
@@ -46,6 +48,7 @@ export class NativeToken extends BaseCurrency {
    * @param oftFee The OFT bridging fee and minimum destination gas per chain in bips, if applicable
    * @param oftPeers The OFT's connected peers
    * @param acrossInfo The across connected peers
+   * @param priceSource The price source for the token, if applicable
    */
   public constructor(
     chainId: number,
@@ -63,7 +66,8 @@ export class NativeToken extends BaseCurrency {
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
     oftPeers?: { [chain: number]: { tokenAddress?: string } },
-    acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
+    acrossInfo?: { [chain: number]: { address: string; decimals?: number } },
+    priceSource?: { address?: string; chainId: number }
   ) {
     super(chainId, decimals, symbol, name)
     if (bypassChecksum) {
@@ -71,6 +75,8 @@ export class NativeToken extends BaseCurrency {
     } else {
       this.address = validateAndParseAddress(address)
     }
+
+    this.priceSource = priceSource ?? undefined
 
     this.isAcross = isAcross ?? false
     this.isOFT = isOFT ?? false

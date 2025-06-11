@@ -11,6 +11,8 @@ export abstract class NativeCurrency extends BaseCurrency {
 
   public readonly isAcross: false = false as const
 
+  public readonly priceSource = undefined
+
   public readonly isOFT: false = false as const
   public readonly oftAdapter = undefined
   public readonly oftVersion = undefined
