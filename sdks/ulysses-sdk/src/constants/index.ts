@@ -216,7 +216,7 @@ export const DEFAULT_GAS_PARAMS: gasParamsMap = {
   },
   [SupportedChainId.SONIC]: {
     gasLimit: JSBI.BigInt(600000).toString(),
-    remoteBranchExecutionGas: JSBI.BigInt(1e18).toString(),
+    remoteBranchExecutionGas: JSBI.BigInt(1e17).toString(),
   },
   [SupportedChainId.BERA]: {
     gasLimit: JSBI.BigInt(600000).toString(),
