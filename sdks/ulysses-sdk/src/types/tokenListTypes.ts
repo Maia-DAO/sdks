@@ -45,6 +45,7 @@ export interface RootTokenInfo {
       | ExtensionValue
   }
   readonly isAcross?: boolean
+  readonly isOFT?: boolean
 }
 
 export interface Version {
