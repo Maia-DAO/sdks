@@ -1,5 +1,9 @@
 type ExtensionValue = string | number | boolean | null | undefined
 
+type Extensions = {
+  readonly [key: string]: ExtensionValue | Extensions
+}
+
 export interface TokenInfo {
   readonly chainId: number
   readonly globalAddress: string
@@ -10,17 +14,7 @@ export interface TokenInfo {
   readonly symbol: string
   readonly logoURI?: string
   readonly tags?: string[]
-  readonly extensions?: {
-    readonly [key: string]:
-      | {
-          [key: string]:
-            | {
-                [key: string]: ExtensionValue
-              }
-            | ExtensionValue
-        }
-      | ExtensionValue
-  }
+  readonly extensions?: Extensions
   readonly isAcross?: boolean
   readonly isOFT?: boolean
 }
@@ -33,17 +27,7 @@ export interface RootTokenInfo {
   readonly symbol: string
   readonly logoURI?: string
   readonly tags?: string[]
-  readonly extensions?: {
-    readonly [key: string]:
-      | {
-          [key: string]:
-            | {
-                [key: string]: ExtensionValue
-              }
-            | ExtensionValue
-        }
-      | ExtensionValue
-  }
+  readonly extensions?: Extensions
   readonly isAcross?: boolean
   readonly isOFT?: boolean
 }
