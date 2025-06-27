@@ -17,6 +17,11 @@ export interface TokenInfo {
   readonly extensions?: Extensions
   readonly isAcross?: boolean
   readonly isOFT?: boolean
+  readonly oftAdapter?: string
+  readonly oftVersion?: number
+  readonly endpointVersion?: number
+  readonly endpointId?: number
+  readonly oftSharedDecimals?: number
 }
 
 export interface RootTokenInfo {
@@ -30,6 +35,11 @@ export interface RootTokenInfo {
   readonly extensions?: Extensions
   readonly isAcross?: boolean
   readonly isOFT?: boolean
+  readonly oftAdapter?: string
+  readonly oftVersion?: number
+  readonly endpointVersion?: number
+  readonly endpointId?: number
+  readonly oftSharedDecimals?: number
 }
 
 export interface Version {
