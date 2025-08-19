@@ -12,18 +12,9 @@ export class NativeToken extends BaseCurrency {
   public readonly isToken: true = true as const
 
   public readonly isGlobal: boolean = false as const
-  public readonly isOFT: boolean
-  public readonly isAcross: boolean
-  public readonly oftAdapter?: string
-  public readonly oftVersion?: number
-  public readonly endpointVersion?: number
-  public readonly endpointId?: number
-  public readonly oftSharedDecimals?: number
-  public readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
-  public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
-  public readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
 
-  public readonly priceSource?: { address?: string; chainId: number }
+  public readonly isAcross: boolean
+  public readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
 
   /**
    * The contract address on the chain on which this token lives.
