@@ -87,6 +87,15 @@ export abstract class BaseCurrency {
    * @param decimals decimals of the currency
    * @param symbol symbol of the currency
    * @param name of the currency
+   * @param isOFT If true, the token is an OFT (Omnichain Fungible Token)
+   * @param oftAdapter The address of the token's OFT adapter, if applicable
+   * @param oftVersion The version of the OFT (Omnichain Fungible Token)
+   * @param endpointVersion The version of the Layer Zero endpoint used
+   * @param endpointId The ID of the Layer Zero endpoint used
+   * @param oftSharedDecimals The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
+   * @param oftFee The OFT bridging fee and minimum destination gas per chain in bips, if applicable
+   * @param oftPeers The OFT's connected peers
+   * @param priceSource The price source for the token, if applicable
    */
   protected constructor(
     chainId: number,
