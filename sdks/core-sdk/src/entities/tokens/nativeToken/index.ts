@@ -58,7 +58,7 @@ export class NativeToken extends BaseCurrency {
     name?: string,
     bypassChecksum?: boolean,
     isAcross?: boolean,
-    isOFT?: boolean,
+    isOFT: boolean = false,
     oftAdapter?: string,
     oftVersion?: number,
     endpointVersion?: number,
