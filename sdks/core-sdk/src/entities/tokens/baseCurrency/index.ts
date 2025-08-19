@@ -26,35 +26,35 @@ export abstract class BaseCurrency {
   /**
    * True if token is an OFT (Omnichain Fungible Token)
    */
-  public abstract readonly isOFT: boolean
+  public readonly isOFT: boolean
   /**
    * The address of the token's OFT adapter, if applicable
    */
-  public abstract readonly oftAdapter?: string
+  public readonly oftAdapter?: string
   /**
    * The version of the OFT (Omnichain Fungible Token)
    */
-  public abstract readonly oftVersion?: number
+  public readonly oftVersion?: number
   /**
    * The version of the Layer Zero endpoint used
    */
-  public abstract readonly endpointVersion?: number
+  public readonly endpointVersion?: number
   /**
    * The ID of the Layer Zero endpoint used
    */
-  public abstract readonly endpointId?: number
+  public readonly endpointId?: number
   /**
    * The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system
    */
-  public abstract readonly oftSharedDecimals?: number
+  public readonly oftSharedDecimals?: number
   /**
    * The OFT bridging fee per chain in bips, if applicable
    */
-  public abstract readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
+  public readonly oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } }
   /**
    * The OFT's connected peers
    */
-  public abstract readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
+  public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
   /**
    * The OFT's connected peers
    */
@@ -62,7 +62,7 @@ export abstract class BaseCurrency {
   /**
    * The price source for the token, if applicable
    */
-  public abstract readonly priceSource?: { address?: string; chainId: number }
+  public readonly priceSource?: { address?: string; chainId: number }
 
   /**
    * The chain ID on which this currency resides
@@ -88,7 +88,21 @@ export abstract class BaseCurrency {
    * @param symbol symbol of the currency
    * @param name of the currency
    */
-  protected constructor(chainId: number, decimals: number, symbol?: string, name?: string) {
+  protected constructor(
+    chainId: number,
+    decimals: number,
+    symbol?: string,
+    name?: string,
+    isOFT?: boolean,
+    oftAdapter?: string,
+    oftVersion?: number,
+    endpointVersion?: number,
+    endpointId?: number,
+    oftSharedDecimals?: number,
+    oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
+    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    priceSource?: { address?: string; chainId: number }
+  ) {
     invariant(Number.isSafeInteger(chainId), 'CHAIN_ID')
     invariant(decimals >= 0 && decimals < 255 && Number.isInteger(decimals), 'DECIMALS')
 
@@ -96,6 +110,18 @@ export abstract class BaseCurrency {
     this.decimals = decimals
     this.symbol = symbol
     this.name = name
+
+    this.priceSource = priceSource ?? undefined
+
+    this.isOFT = isOFT ?? false
+
+    this.oftAdapter = oftAdapter ?? undefined
+    this.oftVersion = oftVersion ?? undefined
+    this.endpointVersion = endpointVersion ?? undefined
+    this.oftSharedDecimals = oftSharedDecimals ?? undefined
+    this.endpointId = endpointId ?? undefined
+    this.oftFee = oftFee ?? undefined
+    this.oftPeers = oftPeers ?? undefined
   }
 
   /**

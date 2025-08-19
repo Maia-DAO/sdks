@@ -10,16 +10,5 @@ export abstract class NativeCurrency extends BaseCurrency {
   public readonly isGlobal: false = false as const
 
   public readonly isAcross: false = false as const
-
-  public readonly priceSource = undefined
-
-  public readonly isOFT: false = false as const
-  public readonly oftAdapter = undefined
-  public readonly oftVersion = undefined
-  public readonly endpointVersion = undefined
-  public readonly endpointId = undefined
-  public readonly oftSharedDecimals = undefined
-  public readonly oftFee = undefined
-  public readonly oftPeers = undefined
   public readonly acrossInfo = undefined
 }

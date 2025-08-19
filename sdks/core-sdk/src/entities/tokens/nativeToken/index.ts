@@ -69,25 +69,28 @@ export class NativeToken extends BaseCurrency {
     acrossInfo?: { [chain: number]: { address: string; decimals?: number } },
     priceSource?: { address?: string; chainId: number }
   ) {
-    super(chainId, decimals, symbol, name)
+    super(
+      chainId,
+      decimals,
+      symbol,
+      name,
+      isOFT,
+      oftAdapter,
+      oftVersion,
+      endpointVersion,
+      endpointId,
+      oftSharedDecimals,
+      oftFee,
+      oftPeers,
+      priceSource
+    )
     if (bypassChecksum) {
       this.address = checkValidAddress(address)
     } else {
       this.address = validateAndParseAddress(address)
     }
 
-    this.priceSource = priceSource ?? undefined
-
     this.isAcross = isAcross ?? false
-    this.isOFT = isOFT ?? false
-
-    this.oftAdapter = oftAdapter ?? undefined
-    this.oftVersion = oftVersion ?? undefined
-    this.endpointVersion = endpointVersion ?? undefined
-    this.oftSharedDecimals = oftSharedDecimals ?? undefined
-    this.endpointId = endpointId ?? undefined
-    this.oftFee = oftFee ?? undefined
-    this.oftPeers = oftPeers ?? undefined
     this.acrossInfo = acrossInfo ?? undefined
   }
 
