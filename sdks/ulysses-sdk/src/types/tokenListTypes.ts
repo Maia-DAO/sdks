@@ -22,6 +22,7 @@ export interface TokenInfo {
   readonly endpointVersion?: number
   readonly endpointId?: number
   readonly oftSharedDecimals?: number
+  readonly noLiquidityOnChain?: boolean
 }
 
 export interface RootTokenInfo {
@@ -40,6 +41,7 @@ export interface RootTokenInfo {
   readonly endpointVersion?: number
   readonly endpointId?: number
   readonly oftSharedDecimals?: number
+  readonly noLiquidityOnChain?: boolean
 }
 
 export interface Version {
