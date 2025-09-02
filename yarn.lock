@@ -11745,6 +11745,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"maia-core-sdk@npm:^1.0.77":
+  version: 1.0.77
+  resolution: "maia-core-sdk@npm:1.0.77"
+  dependencies:
+    "@ethersproject/address": ^5.7.0
+    big.js: ^5.2.2
+    decimal.js-light: ^2.5.0
+    jsbi: ^3.1.5
+    tiny-invariant: ^1.1.0
+    toformat: ^2.0.0
+  checksum: 66c251a0d0fbb5f478541c5221c64c7354ff5242d5dfcbd0bc26fa5f9dbc979e4b624c02d15b14c5ac2a5510aa0e4044d569f17cebc1a0f3eb6bbe446465e2eb
+  languageName: node
+  linkType: hard
+
 "maia-core-sdk@workspace:sdks/core-sdk":
   version: 0.0.0-use.local
   resolution: "maia-core-sdk@workspace:sdks/core-sdk"
@@ -16836,7 +16850,7 @@ __metadata:
   dependencies:
     "@ethersproject/abi": ^5.7.0
     "@types/jest": ^24.0.25
-    maia-core-sdk: ^1.0.74
+    maia-core-sdk: ^1.0.77
     prettier: ^2.4.1
     solady: ^0.0.226
     tsdx: ^0.14.1
