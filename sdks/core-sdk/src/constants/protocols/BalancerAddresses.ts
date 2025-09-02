@@ -2,7 +2,7 @@ import { BalancerAddressesType, IBalancer } from '../../types'
 import { SupportedChainId } from '../chainIds'
 
 /**
- * These addresses are on arbitrum
+ * These addresses are on Arbitrum
  */
 export const ArbitrumBalancerAddresses: IBalancer = {
   ComposableStablePoolWrapperFactory: '0x0FeC6De5Cf270000460000008f0033B910004797',
@@ -10,7 +10,7 @@ export const ArbitrumBalancerAddresses: IBalancer = {
 }
 
 /**
- * These addresses are on sepolia
+ * These addresses are on Sepolia
  */
 export const SepoliaBalancerAddresses: IBalancer = {
   ComposableStablePoolWrapperFactory: '0x996AAA029f3A8826C22CcCf6127A16A0e52FC3Da',
