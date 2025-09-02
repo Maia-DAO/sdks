@@ -40,6 +40,7 @@ export class NativeToken extends BaseCurrency {
    * @param oftPeers The OFT's connected peers
    * @param acrossInfo The across connected peers
    * @param priceSource The price source for the token, if applicable
+   * @param noLiquidityOnChain True if there is no liquidity for that token
    */
   public constructor(
     chainId: number,
@@ -58,7 +59,8 @@ export class NativeToken extends BaseCurrency {
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
     oftPeers?: { [chain: number]: { tokenAddress?: string } },
     acrossInfo?: { [chain: number]: { address: string; decimals?: number } },
-    priceSource?: { address?: string; chainId: number }
+    priceSource?: { address?: string; chainId: number },
+    noLiquidityOnChain?: boolean
   ) {
     super(
       chainId,
@@ -73,7 +75,8 @@ export class NativeToken extends BaseCurrency {
       oftSharedDecimals,
       oftFee,
       oftPeers,
-      priceSource
+      priceSource,
+      noLiquidityOnChain
     )
     if (bypassChecksum) {
       this.address = checkValidAddress(address)

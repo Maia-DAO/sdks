@@ -63,6 +63,10 @@ export abstract class BaseCurrency {
    * The price source for the token, if applicable
    */
   public readonly priceSource?: { address?: string; chainId: number }
+  /**
+   * True if there is no liquidity for that token
+   */
+  public readonly noLiquidityOnChain: boolean
 
   /**
    * The chain ID on which this currency resides
@@ -96,6 +100,7 @@ export abstract class BaseCurrency {
    * @param oftFee The OFT bridging fee and minimum destination gas per chain in bips, if applicable
    * @param oftPeers The OFT's connected peers
    * @param priceSource The price source for the token, if applicable
+   * @param noLiquidityOnChain True if there is no liquidity for that token
    */
   protected constructor(
     chainId: number,
@@ -110,7 +115,8 @@ export abstract class BaseCurrency {
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
     oftPeers?: { [chain: number]: { tokenAddress?: string } },
-    priceSource?: { address?: string; chainId: number }
+    priceSource?: { address?: string; chainId: number },
+    noLiquidityOnChain?: boolean
   ) {
     invariant(Number.isSafeInteger(chainId), 'CHAIN_ID')
     invariant(decimals >= 0 && decimals < 255 && Number.isInteger(decimals), 'DECIMALS')
@@ -121,6 +127,7 @@ export abstract class BaseCurrency {
     this.name = name
 
     this.priceSource = priceSource ?? undefined
+    this.noLiquidityOnChain = noLiquidityOnChain ?? false
 
     this.isOFT = isOFT ?? false
 
