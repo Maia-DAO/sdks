@@ -18,7 +18,7 @@ export class Ether extends NativeCurrency {
     endpointId?: number,
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } },
     priceSource?: { address?: string; chainId: number }
   ) {
     super(
@@ -55,7 +55,7 @@ export class Ether extends NativeCurrency {
     endpointId?: number,
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } },
     priceSource?: { address?: string; chainId: number }
   ): Ether {
     return (

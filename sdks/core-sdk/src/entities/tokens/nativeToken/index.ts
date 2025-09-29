@@ -57,7 +57,7 @@ export class NativeToken extends BaseCurrency {
     endpointId?: number,
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } },
     acrossInfo?: { [chain: number]: { address: string; decimals?: number } },
     priceSource?: { address?: string; chainId: number },
     noLiquidityOnChain?: boolean

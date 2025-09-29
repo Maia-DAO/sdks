@@ -54,7 +54,7 @@ export abstract class BaseCurrency {
   /**
    * The OFT's connected peers
    */
-  public readonly oftPeers?: { [chain: number]: { tokenAddress?: string } }
+  public readonly oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } }
   /**
    * The OFT's connected peers
    */
@@ -114,7 +114,7 @@ export abstract class BaseCurrency {
     endpointId?: number,
     oftSharedDecimals?: number,
     oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string } },
+    oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } },
     priceSource?: { address?: string; chainId: number },
     noLiquidityOnChain?: boolean
   ) {
