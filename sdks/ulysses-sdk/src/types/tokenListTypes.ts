@@ -1,7 +1,7 @@
 type ExtensionValue = string | number | boolean | null | undefined
 
 type Extensions = {
-  readonly [key: string]: ExtensionValue | Extensions
+  readonly [key: string]: ExtensionValue | Extensions | ExtensionValue[] | Extensions[]
 }
 export interface TokenInfo {
   readonly chainId: number
