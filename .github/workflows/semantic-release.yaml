@@ -9,6 +9,8 @@ on:
 jobs:
   release:
     name: Release
+    permissions:
+      contents: write
     environment:
       name: production
     runs-on: ubuntu-latest
