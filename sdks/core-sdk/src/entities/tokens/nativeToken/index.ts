@@ -1,5 +1,6 @@
 import invariant from 'tiny-invariant'
 
+import type { AcrossInfo, TokenExtensions } from '../../../types'
 import { checkValidAddress, validateAndParseAddress } from '../../../utils/addresses/validateAndParseAddress'
 import type { Currency } from '../../tokens/currency'
 import { BaseCurrency } from '../baseCurrency'
@@ -13,13 +14,16 @@ export class NativeToken extends BaseCurrency {
 
   public readonly isGlobal: boolean = false as const
 
-  public readonly isAcross: boolean
-  public readonly acrossInfo?: { [chain: number]: { address: string; decimals?: number } }
-
   /**
    * The contract address on the chain on which this token lives.
    */
   public readonly address: string
+
+  /**
+   * Token extensions containing bridging info, pricing, and other metadata
+   * Uses the full TokenExtensions type with acrossInfo, bridgeInfo, etc.
+   */
+  public readonly extensions?: TokenExtensions
 
   /**
    *
@@ -29,18 +33,7 @@ export class NativeToken extends BaseCurrency {
    * @param symbol {@link BaseCurrency#symbol}
    * @param name {@link BaseCurrency#name}
    * @param bypassChecksum If true it only checks for length === 42, startsWith 0x and contains only hex characters.
-   * @param isAcross If true, the token is supported by Across
-   * @param isOFT If true, the token is an OFT (Omnichain Fungible Token)
-   * @param oftAdapter The address of the token's OFT adapter, if applicable
-   * @param oftVersion The version of the OFT (Omnichain Fungible Token)
-   * @param endpointVersion The version of the Layer Zero endpoint used
-   * @param endpointId The ID of the Layer Zero endpoint used
-   * @param oftSharedDecimals The OFT's “lowest common denominator” of decimal precision across all chains in the OFT system.
-   * @param oftFee The OFT bridging fee and minimum destination gas per chain in bips, if applicable
-   * @param oftPeers The OFT's connected peers
-   * @param acrossInfo The across connected peers
-   * @param priceSource The price source for the token, if applicable
-   * @param noLiquidityOnChain True if there is no liquidity for that token
+   * @param extensions Token extensions containing bridging info, pricing, and other metadata
    */
   public constructor(
     chainId: number,
@@ -49,43 +42,49 @@ export class NativeToken extends BaseCurrency {
     symbol?: string,
     name?: string,
     bypassChecksum?: boolean,
-    isAcross?: boolean,
-    isOFT?: boolean,
-    oftAdapter?: string,
-    oftVersion?: number,
-    endpointVersion?: number,
-    endpointId?: number,
-    oftSharedDecimals?: number,
-    oftFee?: { [chain: number]: { oftFee?: number; minDstGas?: number } },
-    oftPeers?: { [chain: number]: { tokenAddress?: string, noLiquidityOnChain?: boolean } },
-    acrossInfo?: { [chain: number]: { address: string; decimals?: number } },
-    priceSource?: { address?: string; chainId: number },
-    noLiquidityOnChain?: boolean
+    extensions?: TokenExtensions
   ) {
-    super(
-      chainId,
-      decimals,
-      symbol,
-      name,
-      isOFT ?? false,
-      oftAdapter,
-      oftVersion,
-      endpointVersion,
-      endpointId,
-      oftSharedDecimals,
-      oftFee,
-      oftPeers,
-      priceSource,
-      noLiquidityOnChain
-    )
+    super(chainId, decimals, symbol, name, extensions)
     if (bypassChecksum) {
       this.address = checkValidAddress(address)
     } else {
       this.address = validateAndParseAddress(address)
     }
+    this.extensions = extensions
+  }
 
-    this.isAcross = isAcross ?? false
-    this.acrossInfo = acrossInfo ?? undefined
+  // =============================================================================
+  // Token-Specific Extension Getters
+  // =============================================================================
+
+  /**
+   * True if token is supported by Across bridge
+   */
+  public get isAcross(): boolean {
+    return !!this.extensions?.acrossInfo && Object.keys(this.extensions.acrossInfo).length > 0
+  }
+
+  /**
+   * Get Across bridge info
+   */
+  public get acrossInfo(): AcrossInfo | undefined {
+    return this.extensions?.acrossInfo
+  }
+
+  /**
+   * Get Across info for a specific chain
+   * @param chainId the target chain ID
+   */
+  public getAcrossChainInfo(chainId: number): AcrossInfo[number] | undefined {
+    return this.extensions?.acrossInfo?.[chainId]
+  }
+
+  /**
+   * Get all chain IDs that have Across bridge support for this token
+   */
+  public getAcrossChainIds(): number[] {
+    const acrossInfo = this.extensions?.acrossInfo
+    return acrossInfo ? Object.keys(acrossInfo).map(Number) : []
   }
 
   /**
