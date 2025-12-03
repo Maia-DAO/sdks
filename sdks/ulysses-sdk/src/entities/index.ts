@@ -1,4 +1,3 @@
-// export { Tags, TokenInfo, TokenList, Version } from '../types'
 export { BaseBranchRouter } from './BaseBranchRouter'
 export { BranchBridgeAgent } from './BranchBridgeAgent'
 export { ERC20Token } from './erc20'
