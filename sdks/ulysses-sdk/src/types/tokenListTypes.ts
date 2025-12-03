@@ -26,6 +26,7 @@ type AllExtensionValues =
   | GenericExtensions[]
   | PriceSource
   | OFTInfo[]
+  | StargateInfo
   | StargateInfo[]
   | UlyssesInfo
   | BridgeInfo
@@ -42,9 +43,9 @@ export interface TokenExtensions {
   readonly coinMarketCapId?: string
   readonly bridgeInfo?: BridgeInfo
   readonly ulyssesInfo?: UlyssesInfo
-  readonly oftInfo?: readonly OFTInfo[]
+  readonly oftInfo?: OFTInfo[]
   readonly acrossInfo?: AcrossInfo
-  readonly stargateInfo?: readonly StargateInfo[]
+  readonly stargateInfo?: StargateInfo
   readonly priceSource?: PriceSource
   // Allow additional arbitrary extensions
   readonly [key: string]: AllExtensionValues
