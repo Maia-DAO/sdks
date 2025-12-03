@@ -139,7 +139,7 @@ export abstract class BaseCurrency {
    * True if token has Stargate bridge configurations
    */
   public get isStargate(): boolean {
-    return !!this.extensions?.stargateInfo && this.extensions.stargateInfo.length > 0
+    return !!this.extensions?.stargateInfo
   }
 
   /**
