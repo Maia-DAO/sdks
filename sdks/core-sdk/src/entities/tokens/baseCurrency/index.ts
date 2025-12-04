@@ -109,6 +109,28 @@ export abstract class BaseCurrency {
   }
 
   /**
+   * Get OFT Info with least fee for a specific target chain
+   * @param chainId the target chain ID
+   */
+  public getBestOftInfoForChain(chainId: number): OFTInfo | undefined {
+    let bestOft: OFTInfo | undefined
+    let lowestFee: number | undefined
+
+    this.extensions?.oftInfo?.forEach((oft) => {
+      const peer = oft.peers[chainId]
+      if (peer) {
+        const fee = peer.fee ?? 0
+        if (lowestFee === undefined || fee < lowestFee) {
+          lowestFee = fee
+          bestOft = oft
+        }
+      }
+    })
+
+    return bestOft
+  }
+
+  /**
    * Get OFT peer info for a specific chain
    * @param chainId the target chain ID
    * @param adapterAddress the adapter address used for LayerZero messaging
