@@ -120,6 +120,15 @@ export abstract class BaseCurrency {
   }
 
   /**
+   * Get the adapter address for a specific OFT peer
+   * @param peer the peer info object
+   * @returns the adapter address or the peer address if no adapter is specified
+   */
+  public getOftPeerAdapter(peer: PeerInfo): string | undefined {
+    return peer.adapter ?? peer.address
+  }
+
+  /**
    * Get all chain IDs that have OFT peers for this token
    */
   public getAllOftPeerChainIds(): number[] {
@@ -130,9 +139,17 @@ export abstract class BaseCurrency {
    * Get all chain IDs that have OFT peers for this token
    * @param adapterAddress the adapter address used for LayerZero messaging
    */
-  public getOftPeerChainIds(oftIndex: number = 0): number[] {
-    const peers = this.extensions?.oftInfo?.[oftIndex]?.peers
-    return peers ? Object.keys(peers).map(Number) : []
+  public getOftPeerChainIds(adapterAddress: string): number[] {
+    return (
+      Array.from(
+        new Set(
+          Object.keys(
+            this.extensions?.oftInfo?.find((oft) => oft.adapter?.toLowerCase() === adapterAddress?.toLowerCase())
+              ?.peers ?? {}
+          ).map(Number)
+        )
+      ) ?? []
+    )
   }
 
   /**
