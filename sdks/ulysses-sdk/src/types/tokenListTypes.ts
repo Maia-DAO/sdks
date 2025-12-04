@@ -46,7 +46,6 @@ export interface TokenExtensions {
   readonly oftInfo?: OFTInfo[]
   readonly acrossInfo?: AcrossInfo
   readonly stargateInfo?: StargateInfo
-  readonly priceSource?: PriceSource
   // Allow additional arbitrary extensions
   readonly [key: string]: AllExtensionValues
 }
