@@ -25,6 +25,7 @@ export interface PeerInfo {
   readonly adapter?: string
   readonly minGas?: number
   readonly fee?: number
+  readonly noLiquidityOnChain?: boolean
 }
 
 /**
