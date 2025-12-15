@@ -12003,21 +12003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maia-core-sdk@npm:1.0.74, maia-core-sdk@npm:^1.0.74":
-  version: 1.0.74
-  resolution: "maia-core-sdk@npm:1.0.74"
-  dependencies:
-    "@ethersproject/address": ^5.7.0
-    big.js: ^5.2.2
-    decimal.js-light: ^2.5.0
-    jsbi: ^3.1.5
-    tiny-invariant: ^1.1.0
-    toformat: ^2.0.0
-  checksum: 6d1ffd5ca51c78ae6ee555af9e8a952ac7b71217a64d43ab4a55c06da8f38006786baf191027540c73b1fe32548d103f0e7fc01a35c2e3699e68ed668b6db7c9
-  languageName: node
-  linkType: hard
-
-"maia-core-sdk@npm:^1.2.0":
+"maia-core-sdk@npm:^1.0.77, maia-core-sdk@npm:^1.2.0":
   version: 1.2.0
   resolution: "maia-core-sdk@npm:1.2.0"
   dependencies:
@@ -17167,23 +17153,23 @@ __metadata:
     "@ethersproject/solidity": ^5.7.0
     "@types/jest": ^24.0.25
     hermes-v2-sdk: ^0.1.9
-    maia-core-sdk: 1.0.74
+    maia-core-sdk: ^1.2.0
     maia-v2-sdk: ^0.0.8
     prettier: ^2.4.1
     talos-sdk: ^0.0.16
     tsdx: ^0.14.1
-    ulysses-sdk: ^0.0.131
+    ulysses-sdk: ^0.0.137
   languageName: unknown
   linkType: soft
 
-"ulysses-sdk@npm:^0.0.131":
-  version: 0.0.131
-  resolution: "ulysses-sdk@npm:0.0.131"
+"ulysses-sdk@npm:^0.0.137":
+  version: 0.0.137
+  resolution: "ulysses-sdk@npm:0.0.137"
   dependencies:
     "@ethersproject/abi": ^5.7.0
-    maia-core-sdk: ^1.0.74
+    maia-core-sdk: ^1.0.77
     solady: ^0.0.226
-  checksum: e05bef6416370b08123650ad903aa20f6ab133856f15208115035c32add6f7fab750c22017743ed2786b445a1710f4a1973b4ea03c1794da6a5b3541a7651712
+  checksum: adf7deb33bbba17bee4344449cf9f17ea3034b9341d76ee132223c13841d5ffd10cd22f8bf6c5fb8c5f3b363616e5804bd61060ce3bd393130e78163c17647bc
   languageName: node
   linkType: hard
 
