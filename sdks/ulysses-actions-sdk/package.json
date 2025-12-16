@@ -1,7 +1,10 @@
 {
   "name": "ulysses-actions-sdk",
   "description": "An sdk for interacting with contracts using Ulysses Protocol",
-  "repository": "https://github.com/Maia-DAO/sdks.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maia-DAO/sdks.git"
+  },
   "keywords": [
     "ulysses",
     "layerzero",
@@ -60,14 +63,8 @@
         }
       ],
       "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
       "@semantic-release/github",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "yarn npm publish",
-          "execCwd": "."
-        }
-      ],
       [
         "@semantic-release/exec",
         {

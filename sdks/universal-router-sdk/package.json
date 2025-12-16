@@ -1,7 +1,10 @@
 {
   "name": "hermes-universal-router-sdk",
   "description": "sdk for integrating with the Hermes Universal Router contracts",
-  "repository": "https://github.com/Maia-DAO/sdks.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maia-DAO/sdks.git"
+  },
   "keywords": [
     "uniswap",
     "ethereum"
@@ -80,14 +83,8 @@
         }
       ],
       "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
       "@semantic-release/github",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "yarn npm publish",
-          "execCwd": "."
-        }
-      ],
       [
         "@semantic-release/exec",
         {

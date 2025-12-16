@@ -1,7 +1,10 @@
 {
   "name": "hermes-swap-router-sdk",
   "description": "An sdk for routing swaps using Uniswap v2, Uniswap v3 and Balancer Stable Pools.",
-  "repository": "https://github.com/Maia-DAO/sdks.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maia-DAO/sdks.git"
+  },
   "keywords": [
     "uniswap",
     "balancer",
@@ -58,14 +61,8 @@
         }
       ],
       "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
       "@semantic-release/github",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "yarn npm publish",
-          "execCwd": "."
-        }
-      ],
       [
         "@semantic-release/exec",
         {

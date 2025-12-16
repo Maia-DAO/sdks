@@ -1,6 +1,7 @@
 {
   "globalPassThroughEnv": [
     "GITHUB_TOKEN",
+    "NPM_TOKEN",
     "ACTIONS_ID_TOKEN_REQUEST_URL",
     "ACTIONS_ID_TOKEN_REQUEST_TOKEN"
   ],
