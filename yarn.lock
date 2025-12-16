@@ -12003,7 +12003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maia-core-sdk@npm:^1.0.77, maia-core-sdk@npm:^1.2.0":
+"maia-core-sdk@npm:^1.2.0":
   version: 1.2.0
   resolution: "maia-core-sdk@npm:1.2.0"
   dependencies:
@@ -17158,18 +17158,18 @@ __metadata:
     prettier: ^2.4.1
     talos-sdk: ^0.0.16
     tsdx: ^0.14.1
-    ulysses-sdk: ^0.0.137
+    ulysses-sdk: ^0.0.142
   languageName: unknown
   linkType: soft
 
-"ulysses-sdk@npm:^0.0.137":
-  version: 0.0.137
-  resolution: "ulysses-sdk@npm:0.0.137"
+"ulysses-sdk@npm:^0.0.142":
+  version: 0.0.142
+  resolution: "ulysses-sdk@npm:0.0.142"
   dependencies:
     "@ethersproject/abi": ^5.7.0
-    maia-core-sdk: ^1.0.77
+    maia-core-sdk: ^1.2.0
     solady: ^0.0.226
-  checksum: adf7deb33bbba17bee4344449cf9f17ea3034b9341d76ee132223c13841d5ffd10cd22f8bf6c5fb8c5f3b363616e5804bd61060ce3bd393130e78163c17647bc
+  checksum: 5b1d59cf10dbc3edfc04e119cb33cb12428dbfe9318cede6891c4726803ad7a7e33f1d204eafab1ac1fd4aa41a0129011fa03ac6c3f4c630ab50ffbe0d6d82d9
   languageName: node
   linkType: hard
 

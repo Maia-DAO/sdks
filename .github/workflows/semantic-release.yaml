@@ -6,6 +6,10 @@ on:
       - main
       - beta
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: write # To create/publish releases
+
 jobs:
   release:
     name: Release
@@ -23,7 +27,8 @@ jobs:
         uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7
         with:
           cache: yarn
-          node-version: 18
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: yarn --immutable
@@ -35,5 +40,4 @@ jobs:
         env:
           NPM_CONFIG_USERCONFIG: /dev/null
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn g:release
