@@ -44,7 +44,7 @@ export const TalosAddresses: TalosAddressesType = {
     BoostAggregatorFactory: '0x223F3862F28848784432dc48346d133aBA94fbD4',
     TalosManagerFactory: '0xcE827EDa08C1f1A6BdDb4582B0759eF02c7FC3Ff',
     FlywheelCoreInstant: '0xfA7d81256a4fe221A2FD4abb090F2a33a2F956C5',
-    TransferAll: '0x000067eadd040000d8ee00c1b9ca41ef920c005c',
+    TransferAll: '0x000067EADd040000D8ee00c1b9Ca41eF920c005C',
   },
 
   [SupportedChainId.SEPOLIA]: {

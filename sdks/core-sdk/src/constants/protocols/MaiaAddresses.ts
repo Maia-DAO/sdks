@@ -6,7 +6,7 @@ export const MaiaAddresses: MaiaAddressesType = {
   [SupportedChainId.ARBITRUM_ONE]: {
     Maia: '0x00000000ea00F3F4000e7Ed5Ed91965b19f1009B',
     vMaia: '0x000000f0C01c6200354f240000b7003668B4D080',
-    vMaiaVotes: '0x54b6e28a869a56f4e34d1187ae0a35b7dd3be111',
+    vMaiaVotes: '0x54b6e28A869a56f4e34d1187ae0a35b7dD3be111',
     vMaiaTest: ZERO_ADDRESS,
     vMaiaVotesTest: ZERO_ADDRESS,
   },

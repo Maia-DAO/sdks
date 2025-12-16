@@ -126,7 +126,7 @@ const UlyssesSonic: IUlyssesCommonContracts = {
   BranchBridgeAgentFactory: '0x5DFb3dbA421891e616B232466BD97Df94ab26E4C',
   CoreBranchRouter: '0xd0f74CbB2a5f67F48E10F7B5e293e0f78B79B599',
   CoreBranchBridgeAgent: '0x93A2a67010BCCc39e8A0B3E51bcB3D8aDF1DB83a',
-  ERC20hTokenBranchFactory: '0x92dc9db1751f6668a504e4650a275d547c586a38',
+  ERC20hTokenBranchFactory: '0x92DC9DB1751f6668A504e4650A275D547c586a38',
   MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
   MulticallBranchBridgeAgent: '0x43F9bA5CCc690F1073E06765Bea8B24458565B66',
   MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
@@ -136,10 +136,10 @@ const UlyssesSonic: IUlyssesCommonContracts = {
 
 const UlyssesBera: IUlyssesCommonContracts = {
   BranchPort: '0x0000151d008235A6cC00004F00FA2bDF9dF95400',
-  BranchBridgeAgentFactory: '0x294470a65cc1fc67931c3351076f4c1b5d09d786',
+  BranchBridgeAgentFactory: '0x294470A65cC1Fc67931c3351076F4C1b5d09d786',
   CoreBranchRouter: '0xd0f74CbB2a5f67F48E10F7B5e293e0f78B79B599',
   CoreBranchBridgeAgent: '0x2132B6d41De5c767e507F017D310778441b50E94',
-  ERC20hTokenBranchFactory: '0x7e157ce374a8533dc38b539d28e3c5b401cf8105',
+  ERC20hTokenBranchFactory: '0x7E157ce374A8533Dc38B539D28E3C5B401cF8105',
   MulticallBranchRouter: '0xa465E96470f0919B2fb91b2f88D57DeAfB1D766a',
   MulticallBranchBridgeAgent: '0xF40Ae0899Bf756f198b51db0a9E2C59Cc12147A0',
   MulticallBranchRouterLibZip: '0x5786EfFF72450E66e91De12D0e95dF71799b524F',
@@ -182,10 +182,10 @@ const UlyssesSepoliaBranch: IUlyssesCommonContracts = {
   CoreBranchBridgeAgent: ZERO_ADDRESS, // TODO: Update - not used for now
   ERC20hTokenBranchFactory: ZERO_ADDRESS,
   MulticallBranchRouter: '0x9FF07935Aa66aCCEc439a7bc830645B77198E2CF',
-  MulticallBranchBridgeAgent: '0x141282d0442adda1274b9eb7ca368e24b2e06639',
+  MulticallBranchBridgeAgent: '0x141282d0442addA1274b9EB7ca368e24b2E06639',
   MulticallBranchRouterLibZip: '0xb48a73F3dC5F8065B3c9F9EDdcCd33979b518841',
   MulticallBranchBridgeAgentLibZip: ZERO_ADDRESS, // TODO: Update - not used for now
-  NativeToken: '0xfff9976782d46cc05630d1f6ebab18b2324d6b14',
+  NativeToken: '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14',
 }
 
 const UlyssesSepolia: IUlyssesArbitrumContracts = {
