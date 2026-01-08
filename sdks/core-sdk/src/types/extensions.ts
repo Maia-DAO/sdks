@@ -78,8 +78,8 @@ export interface StargateRouteInfo {
  * Stargate bridging configuration
  */
 export interface StargateInfo {
-  readonly version: 1 | 2
-  readonly pool: StargatePoolInfo
+  readonly version?: 1 | 2
+  readonly pool?: StargatePoolInfo
   readonly routes: {
     readonly [chainId: number]: StargateRouteInfo
   }
